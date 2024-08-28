@@ -1,0 +1,11 @@
+body{
+    background: rgb(15, 56, 19);
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-campo-futbol-estilo-degradado_23-2148995842.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; font-size: 14px;
+    color: white;
+    
+}
