@@ -266,8 +266,8 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>2</td>
-                <td>--</td>
-                <td>--</td>
+                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
+                <td>Tobias Winjak</td>
     
             </tr>
             <tr>
