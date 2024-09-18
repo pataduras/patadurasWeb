@@ -1,0 +1,220 @@
+body{
+    background: rgb(15, 56, 19);
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-campo-futbol-estilo-degradado_23-2148995842.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; font-size: 14px;
+    color: white;
+    
+    
+}       
+
+#Titulo{
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+}
+
+#Logo{
+    text-align: center;
+}
+
+.clearfix{
+    clear:both;
+}
+
+#goleadores{
+    text-align: center;
+    
+}
+
+#goles{
+    text-align: left;
+}
+
+#mvp{
+    text-align: center;
+}
+
+#mvps{
+    text-align: left;
+}
+
+
+nav li{
+    padding: 5px;
+    list-style:none;
+    margin: 0px;
+}
+
+
+#introduccion{
+    padding: 5px;
+    list-style:none;
+    text-align: center;
+    margin: 0px;
+
+}
+
+@media (min-width: 768px){
+    body{
+        flex-direction: column;
+    }
+
+    .grid-layout{
+        display: grid;
+        width: 80%;
+        margin: 0px auto;
+        grid-template-columns: 55% 40%;
+        grid-template-rows: 98% 2%;
+
+    }
+
+    .fixture{
+        grid-column: 1;
+
+    }
+
+    .derecha{
+        grid-column: 2;
+        font-family: Arial, sans-serif; font-size: 14px;
+        margin-left: 20%;
+        grid-row: 1;
+    }
+
+    ol{
+        text-align: left;
+        margin: 0px auto;
+    }
+
+    .footer{
+        grid-column: 1 / span 2;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px){
+    body{
+        flex-direction: row;
+    }
+
+    .grid-layout{
+        display: grid;
+        margin: 0px auto;
+        grid-template-columns: 100%;
+        width: 100%;
+
+    }
+    
+    .caja{
+        text-align: center;
+    }
+
+    table{
+        margin: 0 auto;
+    }
+
+    ol{
+        list-style: none;
+        margin-right: 10%;
+    }
+
+    .fixtue{
+        grid-column: 1;
+    }
+
+    .derecha{
+        grid-column: 1;
+        font-family: Arial, sans-serif; font-size: 14px;
+    }
+
+
+    #mvps{
+        text-align: center;
+    }
+
+    #goles{
+        text-align: center;
+    }   
+
+    .footer{
+        grid-row: 2;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+
+@media (max-width:576px){
+    .grid-layout{
+        display: grid;
+        margin: 0px auto;
+        grid-template-columns: 100%;
+        width: 100%;
+
+    }
+    
+    .caja{
+        text-align: center;
+    }
+
+    .fixtue{
+        grid-column: 1;
+    }
+
+    .derecha{
+        grid-column: 1;
+        font-family: Arial, sans-serif; font-size: 14px;
+        
+
+    }
+
+    #mvps{
+        text-align: center;
+    }
+
+    #goles{
+        text-align: center;
+    }
+    
+
+}
+
+@media (max-width:360px){
+    .grid-layout{
+        display: grid;
+        margin: 0px auto;
+        grid-template-columns: 100%;
+        width: 100%;
+
+    }
+    
+    .caja{
+        text-align: center;
+    }
+
+    .fixtue{
+        grid-column: 1;
+    }
+
+    .derecha{
+        grid-column: 1;
+        font-family: Arial, sans-serif; font-size: 14px;
+        
+
+    }
+
+    #mvps{
+        text-align: center;
+    }
+
+    #goles{
+        text-align: center;
+    }
+
+}
