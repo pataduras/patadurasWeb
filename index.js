@@ -307,8 +307,8 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>3</td>
-                <td>--</td>
-                <td>--</td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td>Manuel Panizo</td>
     
             </tr>
             <tr>
