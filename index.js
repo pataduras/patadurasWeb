@@ -35,7 +35,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
@@ -65,7 +65,7 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -96,7 +96,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -126,20 +126,29 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
                         <td>El Cuarto Reich</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <td>3</td>
+                        <td>0</td>
                         <td>Unidad Polenta</td>
                         <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
 
                     </tr>
                 </table>
             </div>
+
+            <br>
+
+            <nav>
+                    <li>
+                        <a href="partido4.html">Info del partido</a>
+                    </li>
+                
+            </nav>
             
         </div></h3> 
 
@@ -147,7 +156,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -167,7 +176,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (1-2)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -220,6 +229,12 @@ function mostrarGoleadores(){
                 <td>6</td>
     
             </tr>
+            <tr>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td>Franco Favotti</td>
+                <td>6</td>
+    
+            </tr>
            
             <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
@@ -242,12 +257,6 @@ function mostrarGoleadores(){
                 <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
                 <td>Tobias Winjak</td>
                 <td>4</td>
-    
-            </tr>
-            <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
-                <td>Franco Favotti</td>
-                <td>3</td>
     
             </tr>
             <tr>
@@ -342,7 +351,7 @@ function mostrarTablas(){
 mostrarTablas();
 
 var equipo1 = ['Jeronimo Hidalgo (C)', 'Franco Favotti', 'Manuel Panizo', 'Lucas Garcia', 'Facundo Moran', 
-                'Enzo Juarez', 'Diego Arroyo', 'Maxi Ventura', 'Gerardo Vaello'];
+                'Enzo Juarez', 'Diego Arroyo', 'Maxi Ventura', 'Gerardo Vaello', 'Teo Formento'];
 
 var equipo2 = ['Fabrizio Cecchini (C)', 'Tobias Winjak', 'Agustin Navarro', 'Franco Mangiameli', 'Tomas Mango', 
                 'Alejo Osuna', 'Nahuel Monti', 'Agustin Lonero', 'Nahuel Lonero'];
@@ -361,7 +370,7 @@ function mostrarEquipo1(){
     `;
 
     var formacion1 = document.getElementById("formacion1");
-    for(i=0; i<9; i++){
+    for(i=0; i<10; i++){
        
         formacion1.innerHTML += "<li>"+ equipo1[i]+"</li>";
          
