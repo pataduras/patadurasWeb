@@ -10,7 +10,7 @@ function mostrarLogoCuartoReich(){
     var logoCuartoReich = document.getElementById("logoCuartoReich");
     logoCuartoReich.innerHTML += `
         <h2><table id="CuartoReich"><tr><th>El Cuarto Reich</th><th><img width="30px" height="30px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></th></tr></table><h2>
-        <h2>3</h2>
+        <h2>6</h2>
     `;
 }
 
@@ -18,7 +18,7 @@ function mostrarLogoUnidadPolenta(){
     var logoUnidadPolenta = document.getElementById("logoUnidadPolenta");
     logoUnidadPolenta.innerHTML += `
         <h2><table id="UnidadPolenta"><tr><th>Unidad Polenta</th><th><img width="35px" height="35px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></th></tr></table><h2>
-        <h2>0</h2>
+        <h2>10</h2>
     `;
 }
 
@@ -44,7 +44,6 @@ function mostrarJugadoresCuartoReich(){
             <td>Facundo Moran</td>
         </tr>
         
-
         <tr>
             <td>Enzo Juarez</td>
         </tr>
@@ -61,8 +60,6 @@ function mostrarJugadoresCuartoReich(){
             <td>Teo Formento</td>
         </tr>
 
-       
-
     </table>
     `;         
     
@@ -78,7 +75,7 @@ function mostrarGolesCuartoReich(){
             </tr>
 
             <tr>
-                <td>3</td>
+                <td>1</td>
             </tr>
 
             <tr>
@@ -98,8 +95,7 @@ function mostrarGolesCuartoReich(){
                 
             </tr>
             <tr>
-                <td>0</td>
-                
+                <td>5</td> 
             </tr>
 
             <tr>
@@ -145,7 +141,6 @@ function mostrarJugadoresUnidadPolenta(){
     `;
 }
 
-
 function mostrarGolesUnidadPolenta(){
     var golesUnidadPolenta = document.getElementById("golesUnidadPolenta");
     golesUnidadPolenta.innerHTML += `
@@ -154,22 +149,22 @@ function mostrarGolesUnidadPolenta(){
                 <td>Goles</td>
             </tr>
             <tr>
-                <td>0</td> 
+                <td>6</td> 
             </tr>
             <tr>
                 <td>0</td>
             </tr>
             <tr>
-                <td>0</td> 
+                <td>1</td> 
             </tr>
             <tr>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
-                <td>0</td> 
+                <td>1</td> 
             </tr>
             <tr>
-                <td>0</td> 
+                <td>1</td> 
             </tr>
             <tr>
                 <td>0</td> 
