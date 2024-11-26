@@ -347,7 +347,7 @@ function mostrarMpvs(){
             <tr>
                 <td>5</td>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
-                <td>--</td>
+                <td>Enzo Juarez</td>
     
             </tr>
             <tr>
