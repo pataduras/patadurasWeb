@@ -59,6 +59,7 @@ nav li{
 
 }
 
+
 @media (min-width: 768px){
     body{
         flex-direction: column;
@@ -88,6 +89,18 @@ nav li{
     ol{
         text-align: left;
         margin: 0px auto;
+    }
+
+    .campeon {
+        grid-column: 1 / span 2;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    
+        /* Centrado adicional */
+        display: flex; /* Usar Flexbox */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
     }
 
     .footer{
@@ -140,7 +153,8 @@ nav li{
 
     #goles{
         text-align: center;
-    }   
+    }
+    
 
     .footer{
         grid-row: 2;

@@ -35,7 +35,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
@@ -65,7 +65,7 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -95,7 +95,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -124,7 +124,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -154,7 +154,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -183,20 +183,30 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (2-3)</h4>
+            <h4>Serie (2-4)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
                         <td>El Cuarto Reich</td>
-                        <td>--</td>
-                        <td>--</td>
+                        <td>9</td>
+                        <td>11</td>
                         <td>Unidad Polenta</td>
                         <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
 
                     </tr>
                 </table>
             </div>
+
+            <br>
+
+            <nav>
+                    <li>
+                        <a href="partido6.html">Info del partido</a>
+                    </li>
+                
+            </nav>
+
         </div></h3>
     `;
 }
@@ -221,50 +231,51 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
                 <td>Fabrizio Cecchini</td>
-                <td>16</td>
+                <td>18</td>
     
             </tr>
             <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
                 <td>Maxi Ventura</td>
+                <td>12</td>
+    
+            </tr>
+            <tr>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td>Diego Arroyo</td>
+                <td>12</td>
+    
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
+                <td>Tomas Mango</td>
                 <td>10</td>
     
+            </tr> 
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
+                <td>Alejo Osuna</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
                 <td>Lucas Garcia</td>
                 <td>7</td>
     
-            </tr>
+            </tr> 
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
-                <td>Tomas Mango</td>
+                <td>Tobias Winjak</td>
                 <td>7</td>
     
             </tr>   
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
-                <td>Alejo Osuna</td>
-                <td>7</td>
-            </tr> 
             <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
                 <td>Enzo Juarez</td>
                 <td>6</td>
     
             </tr>   
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
-                <td>Tobias Winjak</td>
-                <td>5</td>
-    
-            </tr>    
-            <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
-                <td>Diego Arroyo</td>
-                <td>5</td>
-    
-            </tr>
+
             <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
                 <td>Franco Favotti</td>
@@ -279,6 +290,12 @@ function mostrarGoleadores(){
     
             </tr>
             <tr>
+                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
+                <td>Agustin Lonero</td>
+                <td>3</td>
+    
+            </tr>
+            <tr>
                 <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
                 <td>Facundo Moran</td>
                 <td>1</td>
@@ -287,12 +304,6 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
                 <td>Nahuel Lonero</td>
-                <td>1</td>
-    
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
-                <td>Agustin Lonero</td>
                 <td>1</td>
     
             </tr>
@@ -458,6 +469,20 @@ function mostrarTransferencias(){
 }
 
 mostrarTransferencias();
+
+function mostrarCampeon(){
+    var campeon = document.getElementById("Campeon");
+    campeon.innerHTML +=
+    `
+        <h1>
+            <table border="0"><tr><td>CAMPEON: UNIDAD POLENTA</td><td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td></tr></table>
+
+        </h1>
+    `;
+
+}
+
+mostrarCampeon();
 
 function mostrarFooter(){
     var footer = document.getElementById("Footer");
