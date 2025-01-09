@@ -7,7 +7,7 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif; 
     font-size: 14px;
-    color: white;
+    color: #a08407;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,7 +17,7 @@ body {
 
 /* Encabezado */
 header#Titulo {
-    color: rgb(1, 32, 5);
+    color: #b89809;
     text-align: center;
     padding: 20px 0;
     position: relative;
