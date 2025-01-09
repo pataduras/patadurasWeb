@@ -1,0 +1,126 @@
+body {
+    background: rgb(15, 56, 19);
+    background-image: url('https://fotos.perfil.com/2021/10/25/trim/987/555/diego-maradona-1255769.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #967d10;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    color: #967d10;
+}
+
+table th, table td {
+    padding: 10px 15px;
+    text-align: center;
+    border: 1.5px solid black;
+}
+
+table tbody tr:hover {
+    cursor: pointer;
+}
+
+table tbody td {
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Pie de página */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Media Queries para distintos tamaños de pantalla */
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    table {
+        width: 95%; /* Ajusta la tabla al 95% del ancho */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    table th, table td {
+        padding: 8px; /* Reduce el padding */
+    }
+
+    header {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto en el header */
+    }
+    
+    main {
+        padding: 15px; /* Reduce el padding de main */
+    }
+}
+
+/* Pantallas medianas (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    table {
+        width: 90%; /* Ajusta ligeramente el ancho */
+    }
+
+    table th, table td {
+        padding: 10px; /* Ajusta el padding */
+    }
+
+    header {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        text-align: left; /* Alineación para mejor lectura en móviles */
+    }
+
+    table {
+        width: 100%; /* Tabla ocupa el 100% del ancho */
+        font-size: 0.8rem; /* Reduce aún más el tamaño del texto */
+    }
+
+    table th, table td {
+        padding: 5px; /* Reduce el padding */
+    }
+
+    header {
+        font-size: 1rem; /* Texto más pequeño en el header */
+        padding: 10px; /* Reduce el padding en el header */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce el tamaño del texto en el footer */
+    }
+}

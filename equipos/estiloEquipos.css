@@ -1,0 +1,183 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content wrapper */
+.content {
+    flex: 1;
+    background-color: #03360e;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Competition container */
+.competition {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite ajuste automático en pantallas pequeñas */
+}
+
+/* Year container */
+.competition-year {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Teams container */
+.teams-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Team section */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #03360e;
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    width: 45%; /* Ajustado para side-by-side */
+}
+
+.integrantes {
+    color: #4CAF50;
+}
+
+/* Team logo */
+.team-logo {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.El-Cuarto-Reich {
+    max-width: 60%;
+    border-radius: 8px;
+}
+
+.Unidad-Polenta,
+.equipo2025_1,
+.equipo2025_2 {
+    max-width: 35%;
+    border-radius: 8px;
+}
+
+.integrantesUnidadPolenta {
+    color: white;
+}
+
+/* Team stats */
+.team-stats {
+    text-align: center;
+}
+
+.team-stats h2 {
+    margin: 0 0 10px;
+    color: #4CAF50;
+}
+
+.team-stats p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Remove bullet points from lists */
+.team-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #03360e;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Media Queries para distintos tamaños de pantalla */
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .competition {
+        flex-direction: column; /* Cambia a columna */
+        gap: 10px;
+    }
+
+    .team {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .competition-year {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+        padding: 15px;
+    }
+}
+
+/* Pantallas medianas (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .team {
+        width: 48%; /* Reduce ligeramente el ancho */
+    }
+
+    .competition-year {
+        font-size: 1.4rem;
+    }
+}
+
+/* Pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    header {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    .competition-year {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .team {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,150 @@
+body {
+    background: rgb(15, 56, 19);
+    background-image: url('https://pbs.twimg.com/media/GgfbvluW4AA-iTQ?format=jpg&name=medium');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; 
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header#Titulo {
+    color: rgb(1, 32, 5);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+header#Titulo .logo {
+    margin-top: 10px;
+}
+
+header#Titulo .logo img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Menú de navegación */
+nav#menu {
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#menu ul li {
+    margin: 10px 0;
+}
+
+nav#menu ul li a {
+    text-decoration: none;
+    color: rgb(1, 32, 5);
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav#menu ul li a:hover {
+    background-color: #0fe021;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+main h2 {
+    color: rgb(1, 32, 5);
+}
+
+/* Pie de página */
+footer#Footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px; /* Reduce el tamaño de fuente para pantallas pequeñas */
+    }
+
+    header#Titulo .logo img {
+        width: 80px; /* Reduce el tamaño del logo */
+    }
+
+    nav#menu ul li a {
+        font-size: 14px; /* Reduce el tamaño del texto del menú */
+        padding: 8px; /* Reduce el padding */
+    }
+
+    main {
+        padding: 15px; /* Reduce el espacio en el main */
+    }
+
+    footer#Footer {
+        font-size: 12px; /* Reduce el tamaño del texto en el footer */
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    header#Titulo {
+        padding: 10px 0; /* Reduce el padding del header */
+    }
+
+    header#Titulo .logo img {
+        width: 60px; /* Reduce aún más el tamaño del logo */
+    }
+
+    nav#menu ul li {
+        margin: 5px 0; /* Reduce el margen entre enlaces */
+    }
+
+    nav#menu ul li a {
+        font-size: 12px; /* Texto más pequeño en los enlaces */
+        padding: 5px; /* Reduce el padding */
+    }
+
+    main {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto en el main */
+    }
+
+    footer#Footer {
+        font-size: 10px; /* Texto más pequeño en el footer */
+    }
+}
+
+/* Pantallas medianas (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 13px; /* Ajusta el tamaño general */
+    }
+
+    nav#menu ul li a {
+        font-size: 15px; /* Ajusta el tamaño del texto del menú */
+        padding: 10px; /* Ajusta el padding */
+    }
+}
