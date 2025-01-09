@@ -1,6 +1,6 @@
 body {
     background: rgb(15, 56, 19);
-    background-image: url('file:///C:/Users/User/Pictures/tapia.jpg');
+    background-image: url('https://pbs.twimg.com/media/GgzoC2UWwAAYH_y?format=jpg&name=small');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -15,3 +15,27 @@ body {
     font-weight: bold; /* Aumenta el grosor de la fuente */
 }
 
+/* Media Queries */
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de fuente para pantallas más pequeñas */
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Texto más pequeño en dispositivos muy pequeños */
+        text-align: center; /* Centra el contenido */
+        padding: 5px; /* Reduce el padding general */
+    }
+}
+
+/* Pantallas medianas (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Ajusta el tamaño general del texto */
+    }
+}
