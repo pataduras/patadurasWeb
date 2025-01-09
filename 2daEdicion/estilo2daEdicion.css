@@ -51,7 +51,6 @@ nav#menu ul li {
 
 nav#menu ul li a {
     text-decoration: none;
-    color: rgb(1, 32, 5);
     font-weight: bold;
     font-size: 16px;
     display: block;
@@ -60,9 +59,6 @@ nav#menu ul li a {
     border-radius: 5px;
 }
 
-nav#menu ul li a:hover {
-    background-color: #0fe021;
-}
 
 main {
     text-align: center;
@@ -70,9 +66,6 @@ main {
     flex: 1;
 }
 
-main h2 {
-    color: rgb(1, 32, 5);
-}
 
 /* Pie de página */
 footer#Footer {
