@@ -341,7 +341,7 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>4</td>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://pbs.twimg.com/media/GdL5hHvWUAAFKJS?format=png&name=small"></td>
+                <td><img width="25px" height="25px" alt="Escritorio" src="https://pbs.twimg.com/media/GdL5hHvWUAAFKJS?format=png&name=small"></td>
                 <td>Escritorio</td>
     
             </tr>
@@ -353,8 +353,8 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>6</td>
-                <td>--</td>
-                <td>--</td>
+                <td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td>
+                <td>Tomas Mango</td>
     
             </tr>
         </table></h3>
