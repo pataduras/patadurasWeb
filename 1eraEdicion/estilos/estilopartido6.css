@@ -180,6 +180,11 @@ footer{
         font-size: 13px;
     }
 
+    .mangia{
+        color: green;
+        font-size: 8px;     
+    }
+
    
 }
 
@@ -231,8 +236,9 @@ footer{
     }
 
     .mangia{
+        color: red;
         font-size: 8px;     
-     }
+    }
     
 }
 
@@ -281,5 +287,10 @@ footer{
 
     .goles2{
         font-size: 13px;
+    }
+
+    .mangia{
+        color: purple;
+        font-size: 8px;     
     }
 }
