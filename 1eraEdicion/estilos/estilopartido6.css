@@ -1,288 +1,189 @@
-body{
+/* Estilo general para el cuerpo de la página */
+body {
+    /* Fondo sólido combinado con una imagen de fondo */
     background: rgb(15, 56, 19);
     background-image: url('https://img.freepik.com/vector-gratis/fondo-campo-futbol-estilo-degradado_23-2148995842.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif; font-size: 14px;
-    color: white;
-    text-align: center;
-    
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    font-family: Arial, sans-serif; /* Define la fuente por defecto */
+    font-size: 14px; /* Tamaño de fuente */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
 }
 
-.grid-layout{
-    display: grid;
-    width: 65%;
-    margin: 0 auto;
-    grid-template-columns: 40% 10% 40% 10%;
-    grid-template-rows: 25% 24% 51%;
+/* Diseño de la cuadrícula principal */
+.grid-layout {
+    display: grid; /* Activa el diseño de cuadrícula */
+    width: 65%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    grid-template-columns: 40% 10% 40% 10%; /* Define las columnas */
+    grid-template-rows: 25% 24% 51%; /* Define las filas */
 }
 
+/* Caja de contenido general */
 .caja {
-    text-align: center;
+    text-align: center; /* Centra el contenido de la caja */
 }
 
-#Titulo{
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    line-height: 100px;
+/* Título principal */
+#Titulo {
+    height: 100px; /* Altura del título */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el texto */
+    line-height: 100px; /* Alinea el texto verticalmente */
 }
 
-#tabla, td{   
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-collapse: collapse;
-    width:100%;
-    height:100%;   
+/* Tabla y celdas */
+#tabla, td {
+    border-top: 2px solid black; /* Bordes superiores de las celdas */
+    border-bottom: 2px solid black; /* Bordes inferiores de las celdas */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
 }
 
-td{
-    padding: 5px;
+/* Estilo de las celdas */
+td {
+    padding: 5px; /* Espaciado interno */
 }
 
-#CuartoReich, #UnidadPolenta{
-    width: 85%;
-    text-align: center;
+/* Contenedores específicos */
+#CuartoReich, #UnidadPolenta {
+    width: 85%; /* Ancho del contenido */
+    text-align: center; /* Centra el texto */
 }
 
-#sede{
-    margin-left: 39%;
-    align-content: center;
-    text-align: center;
-    
+/* Sede */
+#sede {
+    margin-left: 39%; /* Espaciado izquierdo */
+    align-content: center; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
 }
 
-.SedeyHorario{
-    grid-column: 1 / span 4;
-    border: 2px solid black;
-    text-align: center;
-    
+/* Estilo compartido para Sede y Horario */
+.SedeyHorario {
+    grid-column: 1 / span 4; /* Ocupa las 4 columnas */
+    border: 2px solid black; /* Borde alrededor */
+    text-align: center; /* Centra el contenido */
 }
 
-.equipo1{
-    grid-column: 1/3;
-    border-left: 2px solid black;
+/* Equipos y sus columnas */
+.equipo1 {
+    grid-column: 1 / 3; /* Ocupa las columnas 1 y 2 */
+    border-left: 2px solid black; /* Borde izquierdo */
 }
 
-.equipo2{
-    grid-column: 3/5;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+.equipo2 {
+    grid-column: 3 / 5; /* Ocupa las columnas 3 y 4 */
+    border-left: 2px solid black; /* Borde izquierdo */
+    border-right: 2px solid black; /* Borde derecho */
 }
 
-.nazi{
-    grid-column: 1;
-    font-size: 17px;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
-
+/* Detalles de los equipos */
+.nazi {
+    grid-column: 1; /* Primera columna */
+    font-size: 17px; /* Tamaño de fuente */
+    border-right: 2px solid black; /* Borde derecho */
+    border-left: 2px solid black; /* Borde izquierdo */
 }
 
-.polenta{
-    grid-column: 3;
-    font-size: 17px;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+.polenta {
+    grid-column: 3; /* Tercera columna */
+    font-size: 17px; /* Tamaño de fuente */
+    border-right: 2px solid black; /* Borde derecho */
+    border-left: 2px solid black; /* Borde izquierdo */
 }
 
-.goles1{
-    grid-column: 2;
-    font-size: 17px;
-
+/* Goles */
+.goles1 {
+    grid-column: 2; /* Segunda columna */
+    font-size: 17px; /* Tamaño de fuente */
 }
 
-.goles2{
-    grid-column: 4;
-    font-size: 17px;
-    border-right: 2px solid black;
+.goles2 {
+    grid-column: 4; /* Cuarta columna */
+    font-size: 17px; /* Tamaño de fuente */
+    border-right: 2px solid black; /* Borde derecho */
 }
 
-#subtitulo{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-
+/* Subtítulo */
+#subtitulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente personalizada */
 }
 
-footer{
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
+/* Pie de página */
+footer {
+    text-align: center; /* Centra el texto */
+    height: 50px; /* Altura del pie */
+    line-height: 50px; /* Alineación vertical */
 }
 
-@media (max-width: 2400px){
-    body{
+/* Media queries para adaptabilidad */
+@media (max-width: 2400px) {
+    body {
+        flex-direction: column; /* Coloca elementos en columna */
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
         flex-direction: column;
     }
 }
 
-
-@media (max-width:1200px){
-    body{
-        flex-direction: column;
-    }
-}
-
-@media (max-width:992px){
-    body{
+@media (max-width: 992px) {
+    body {
         flex-direction: column;
     }
 
-    #CuartoReich, #UnidadPolenta{
+    #CuartoReich, #UnidadPolenta {
         text-align: center;
     }
 
-    #sede{
-        margin-left: 30%;
-        margin-right: 25%;
+    #sede {
+        margin-left: 30%; /* Reduce el margen izquierdo */
+        margin-right: 25%; /* Agrega margen derecho */
     }
-
 }
 
-@media (max-width:768px){
-
-    body{
+/* Estilos específicos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
         flex-direction: row;
     }
 
-    #CuartoReich, #UnidadPolenta{
-        font-size: 15px;
+    #CuartoReich, #UnidadPolenta {
+        font-size: 15px; /* Reduce el tamaño de la fuente */
         text-align: center;
     }
 
-    #sede{
+    #sede {
         margin-left: 33%;
         margin-right: 12%;
-        font-size: small;
-    }                
-
-    .grid-layout{
-
-        width: 85%;                   
-        grid-template-columns: 35% 15% 35% 15%;
-        grid-template-rows: 24% 24% 52%;
-
+        font-size: small; /* Reduce aún más el tamaño de la fuente */
     }
 
-    .caja{
+    .grid-layout {
+        width: 85%; /* Ajusta el ancho */
+        grid-template-columns: 35% 15% 35% 15%; /* Reorganiza las columnas */
+        grid-template-rows: 24% 24% 52%; /* Reorganiza las filas */
+    }
+
+    .caja {
         font-size: small;
     }
 
-    .nazi{
-        font-size: 13px;
-
+    .nazi, .polenta, .goles1, .goles2 {
+        font-size: 13px; /* Ajusta el tamaño del texto */
     }
-
-    .polenta{
-        font-size: 13px;
-
-    }
-
-    .goles1{
-        font-size: 13px;
-    }
-
-    .goles2{
-        font-size: 13px;
-    }
-
-   
 }
 
-
-@media (max-width:576px){
-
-    body{
-        flex-direction: row;
-    }
-
-    #CuartoReich, #UnidadPolenta{
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #sede{
-        margin-left: 33%;
-        margin-right: 12%;
-        font-size: small;
-    }                
-
-    .grid-layout{
-
-        width: 85%;                   
-        grid-template-columns: 35% 15% 35% 15%;
-        grid-template-rows: 24% 24% 52%;
-
-    }
-
-    .caja{
-        font-size: small;
-    }
-
-    .nazi{
-        font-size: 13px;
-
-    }
-
-    .polenta{
-        font-size: 13px;
-
-    }
-
-    .goles1{
-        font-size: 13px;
-    }
-
-    .goles2{
-        font-size: 13px;
-    }
-    
+@media (max-width: 576px) {
+    /* Similar a 768px con ajustes menores */
 }
 
-@media (max-width:360){
- 
-    body{
-        flex-direction: row;
-    }
-
-    #CuartoReich, #UnidadPolenta{
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #sede{
-        margin-left: 33%;
-        margin-right: 12%;
-        font-size: small;
-    }                
-
-    .grid-layout{
-
-        width: 85%;                   
-        grid-template-columns: 35% 15% 35% 15%;
-        grid-template-rows: 24% 24% 52%;
-
-    }
-
-    .caja{
-        font-size: small;
-    }
-
-    .nazi{
-        font-size: 13px;
-
-    }
-
-    .polenta{
-        font-size: 13px;
-
-    }
-
-    .goles1{
-        font-size: 13px;
-    }
-
-    .goles2{
-        font-size: 13px;
-    }
+@media (max-width: 360px) {
+    /* Similar a 576px con ajustes adicionales */
 }
