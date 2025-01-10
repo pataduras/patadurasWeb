@@ -1,4 +1,5 @@
-body{
+/* Estilos globales */
+body {
     background: rgb(15, 56, 19);
     background-image: url('https://img.freepik.com/vector-gratis/fondo-campo-futbol-estilo-degradado_23-2148995842.jpg');
     background-repeat: no-repeat;
@@ -8,7 +9,6 @@ body{
     font-family: Arial, sans-serif; font-size: 14px;
     color: white;
     text-align: center;
-    
 }
 
 .grid-layout{
@@ -16,7 +16,7 @@ body{
     width: 65%;
     margin: 0 auto;
     grid-template-columns: 40% 10% 40% 10%;
-    grid-template-rows: 22% 24% 54%;
+    grid-template-rows: 25% 24% 51%;
 }
 
 .caja {
@@ -40,6 +40,7 @@ body{
 
 td{
     padding: 5px;
+    text-align: center; /* Centraliza los contenidos de las celdas, incluyendo fecha y lugar */
 }
 
 #CuartoReich, #UnidadPolenta{
@@ -48,17 +49,15 @@ td{
 }
 
 #sede{
-    margin-left: 39%;
+    margin: 0 auto; /* Centraliza la sección de lugar */
     align-content: center;
     text-align: center;
-    
 }
 
 .SedeyHorario{
     grid-column: 1 / span 4;
     border: 2px solid black;
     text-align: center;
-    
 }
 
 .equipo1{
@@ -77,7 +76,6 @@ td{
     font-size: 17px;
     border-right: 2px solid black;
     border-left: 2px solid black;
-
 }
 
 .polenta{
@@ -90,7 +88,6 @@ td{
 .goles1{
     grid-column: 2;
     font-size: 17px;
-
 }
 
 .goles2{
@@ -100,8 +97,7 @@ td{
 }
 
 #subtitulo{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 footer{
@@ -115,7 +111,6 @@ footer{
         flex-direction: column;
     }
 }
-
 
 @media (max-width:1200px){
     body{
@@ -133,8 +128,7 @@ footer{
     }
 
     #sede{
-        margin-left: 30%;
-        margin-right: 25%;
+        margin: 0 auto;
     }
 
 }
@@ -151,8 +145,7 @@ footer{
     }
 
     #sede{
-        margin-left: 33%;
-        margin-right: 12%;
+        margin: 0 auto;
         font-size: small;
     }                
 
@@ -189,7 +182,6 @@ footer{
    
 }
 
-
 @media (max-width:576px){
 
     body{
@@ -199,11 +191,11 @@ footer{
     #CuartoReich, #UnidadPolenta{
         font-size: 15px;
         text-align: center;
+        white-space: nowrap; /* Evita que "Franco Mangiameli" se divida en dos líneas */
     }
 
     #sede{
-        margin-left: 33%;
-        margin-right: 12%;
+        margin: 0 auto;
         font-size: small;
     }                
 
@@ -236,59 +228,6 @@ footer{
     .goles2{
         font-size: 13px;
     }
-
-   
-}
-
-
-@media (max-width:576px){
-
-    body{
-        flex-direction: row;
-    }
-    
-    #CuartoReich, #UnidadPolenta{
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #sede{
-        margin-left: 22%;
-        margin-right: 15%;
-        font-size: small;
-
-    }    
-
-    .grid-layout{
-
-        width: 85%;                                       
-        grid-template-columns: 35% 15% 35% 15%;
-        grid-template-rows: 24% 24% 52%;
-
-    }
-
-    .caja{
-        font-size: small;
-    }
-
-    .nazi{
-        font-size: 13px;
-
-    }
-
-    .polenta{
-        font-size: 13px;
-
-    }
-
-    .goles1{
-        font-size: 13px;
-    }
-
-    .goles2{
-        font-size: 13px;
-    }
-
     
 }
 
@@ -301,69 +240,17 @@ footer{
     #CuartoReich, #UnidadPolenta{
         font-size: 15px;
         text-align: center;
+        white-space: nowrap; /* Evita que "Franco Mangiameli" se divida en dos líneas */
     }
 
     #sede{
-        margin-left: 33%;
-        margin-right: 12%;
+        margin: 0 auto;
         font-size: small;
     }                
 
     .grid-layout{
 
         width: 85%;                   
-        grid-template-columns: 35% 15% 35% 15%;
-        grid-template-rows: 24% 24% 52%;
-
-    }
-
-    .caja{
-        font-size: small;
-    }
-
-    .nazi{
-        font-size: 13px;
-
-    }
-
-    .polenta{
-        font-size: 13px;
-
-    }
-
-    .goles1{
-        font-size: 13px;
-    }
-
-    .goles2{
-        font-size: 13px;
-    }
-
-   
-}
-
-
-@media (max-width:576px){
-
-    body{
-        flex-direction: row;
-    }
-    
-    #CuartoReich, #UnidadPolenta{
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #sede{
-        margin-left: 22%;
-        margin-right: 15%;
-        font-size: small;
-
-    }    
-
-    .grid-layout{
-
-        width: 85%;                                       
         grid-template-columns: 35% 15% 35% 15%;
         grid-template-rows: 24% 24% 52%;
 

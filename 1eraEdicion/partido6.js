@@ -140,7 +140,7 @@ function mostrarJugadoresUnidadPolenta(){
             <tr>
                 <td>Nahuel Monti</td>
             </tr>
-            <tr>
+            <tr class= "mangia">
                 <td>Franco Mangiameli</td>
             </tr>
            
