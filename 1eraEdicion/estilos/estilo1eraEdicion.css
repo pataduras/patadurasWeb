@@ -59,6 +59,11 @@ nav li{
 
 }
 
+.campeon{
+    color: #a08407;
+}
+
+
 
 @media (min-width: 768px){
     body{
@@ -194,6 +199,10 @@ nav li{
 
     #goles{
         text-align: center;
+    }
+
+    .campeon{
+        font-size: 14px
     }
     
 
