@@ -1,41 +1,38 @@
 body {
-    background: rgb(15, 56, 19);
-    background-image: url('https://pbs.twimg.com/media/GgzoC2UWwAAYH_y?format=jpg&name=small');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background-color: #0f3813; /* Fondo verde oscuro */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #292901; /* Amarillo brillante */
+    color: #f1f1f1; /* Blanco humo para contraste */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-weight: bold; /* Aumenta el grosor de la fuente */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
+    align-items: center; /* Centra el contenido en la página */
+    text-align: center; /* Asegura que el texto también esté centrado */
 }
 
-/* Media Queries */
-
-/* Pantallas pequeñas (menos de 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Reduce el tamaño de fuente para pantallas más pequeñas */
-    }
+/* Estilo para el título */
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Blanco para contraste */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
 }
 
-/* Pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Texto más pequeño en dispositivos muy pequeños */
-        text-align: center; /* Centra el contenido */
-        padding: 5px; /* Reduce el padding general */
-    }
+/* Estilo para la imagen */
+.img-container {
+    width: 60%; /* Define el ancho de la imagen */
+    max-width: 800px; /* Limita el tamaño máximo */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: flex;
+    justify-content: center;
 }
 
-/* Pantallas medianas (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        font-size: 16px; /* Ajusta el tamaño general del texto */
-    }
+.img-container img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 300px; /* Ajusta la altura */
+    object-fit: cover; /* Recorta la imagen para que mantenga proporción sin deformarse */
+    display: block;
+    border-radius: 10px; /* Opcional: bordes redondeados para un mejor diseño */
 }

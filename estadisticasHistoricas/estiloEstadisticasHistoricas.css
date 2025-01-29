@@ -1,10 +1,5 @@
 body {
     background: rgb(15, 56, 19);
-    background-image: url('https://fotos.perfil.com/2021/10/25/trim/987/555/diego-maradona-1255769.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     font-family: Arial, sans-serif;
     color: black;
     text-align: center;
@@ -16,7 +11,7 @@ body {
 }
 
 header {
-    color: #967d10;
+    color: #bb9d1a;
     text-align: center;
     padding: 20px 0;
 }
@@ -36,7 +31,7 @@ table {
 }
 
 table thead {
-    color: #967d10;
+    color: #bb9d1a;
 }
 
 table th, table td {
@@ -51,7 +46,7 @@ table tbody tr:hover {
 
 table tbody td {
     font-weight: bold;
-    color: #ffeb3b;
+    color: #bb9d1a;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -60,7 +55,7 @@ caption {
     font-size: 1.2em;
     margin-bottom: 0.5em;
     text-align: center;
-    color: rgb(92, 71, 4);
+    color: rgb(202, 156, 5);
 }
 
 /* Pie de página */
