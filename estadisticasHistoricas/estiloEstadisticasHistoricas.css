@@ -37,7 +37,7 @@ table thead {
 table th, table td {
     padding: 10px 15px;
     text-align: center;
-    border: 1.5px solid black;
+    border: 2px solid black;
 }
 
 table tbody tr:hover {
