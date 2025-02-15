@@ -351,7 +351,7 @@ function mostrarEquipo1(){
     `;
 
     var formacion1 = document.getElementById("formacion1");
-    for(i=0; i<10; i++){
+    for(i=0; i<11; i++){
        
         formacion1.innerHTML += "<li>"+ equipo1[i]+"</li>";
          
@@ -372,7 +372,7 @@ function mostrarEquipo2(){
     `;
 
     var formacion2 = document.getElementById("formacion2");
-    for(i=0; i<9; i++){
+    for(i=0; i<10; i++){
         formacion2.innerHTML += "<li>"+ equipo2[i]+"</li>";    
     }
 
