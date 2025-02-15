@@ -121,7 +121,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 14px; /* Texto más pequeño para enlaces */
+        font-size: 22px; /* Texto más pequeño para enlaces */
     }
 
     main {
@@ -140,7 +140,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 17px; /* Ajuste intermedio para enlaces */
+        font-size: 22px; /* Ajuste intermedio para enlaces */
     }
 
     main h2 {
