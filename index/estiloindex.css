@@ -54,7 +54,7 @@ nav#menu ul li a {
     text-decoration: none;
     color: #ffeb3b; /* Amarillo brillante */
     font-weight: bold;
-    font-size: 18px; /* Tamaño de fuente mayor */
+    font-size: 22px; /* Tamaño de fuente mayor */
     display: block;
     transition: color 0.3s, background-color 0.3s;
     padding: 10px;
@@ -97,7 +97,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 16px; /* Reduce el tamaño de los enlaces */
+        font-size: 22px; /* Reduce el tamaño de los enlaces */
         padding: 8px; /* Ajusta el padding */
     }
 
