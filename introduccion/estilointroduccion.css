@@ -13,6 +13,10 @@ body {
     text-align: center; /* Asegura que el texto también esté centrado */
 }
 
+#Titulo{
+    font-size: 50px
+}
+
 /* Estilo para el título */
 h1 {
     font-size: 2.5rem;
@@ -35,4 +39,10 @@ h1 {
     object-fit: cover; /* Recorta la imagen para que mantenga proporción sin deformarse */
     display: block;
     border-radius: 10px; /* Opcional: bordes redondeados para un mejor diseño */
+}
+
+@media (max-width:768px){
+    #Titulo{
+        font-size: 35px;
+    }
 }
