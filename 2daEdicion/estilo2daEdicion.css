@@ -46,6 +46,9 @@ body {
 
 }
 
+#tablaGoleadores, #tablaMVPS{
+    text-align: center;
+}
     
 .fixture {
     padding: 15px;
@@ -62,6 +65,19 @@ body {
 .escudoComunidadAnillo{
     padding: 8px
 }
+
+nav li{
+    list-style:none;
+
+}
+
+nav li a{
+    padding: 5px;
+    margin: 0px;
+    color: rgb(240, 245, 244); /* Cambia el color del enlace */
+    text-decoration: none; /* Opcional: quita el subrayado */
+}
+
 
 .footer{
     text-align: center;
@@ -83,10 +99,17 @@ body {
 
     .derecha {
         grid-column: 2;
-        font-size: 16px;
+        font-size: 15px;
         margin-left: 20%;
         grid-row: 1;
+
     }
+    #golesTitulo, #mvpsTitulo, #equiposTitulo, #fixtureTitulo{
+        color: rgb(202, 156, 5);
+        font-size: 20px;
+    
+    }
+    
 }
 
 @media (max-width: 768px) {

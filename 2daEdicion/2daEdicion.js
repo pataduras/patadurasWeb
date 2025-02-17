@@ -25,22 +25,29 @@ function mostrarFixture(){
         </header>
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
-                        <td><img class= escudoAstrosGambeta width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>7</td>
+                        <td>4</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img class= escudoComunidadAnillo width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
             </div>
 
             <br>
+
+            <nav>
+                    <li>
+                        <a href="partido1.html">Info del partido</a>
+                    </li>
+                
+            </nav>
     
         </div></h3>
         
@@ -48,16 +55,16 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -71,16 +78,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -95,16 +102,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -119,16 +126,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -142,16 +149,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -166,16 +173,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 7</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -189,16 +196,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 8</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -212,16 +219,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 9</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -235,16 +242,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 10</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -258,16 +265,16 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 11</h3>
-            <h4>Serie (0-0)</h4>
+            <h4>Serie (1-0)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="30px" height="35px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                        <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
                         <td>-</td>
                         <td>-</td>
                         <td>La Comunidad del Anillo</td>
-                        <td><img width="30px" height="30px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                        <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
                     </tr>
                 </table>
@@ -290,13 +297,70 @@ function mostrarGoleadores(){
             <h2>Goleadores</h2>
         </header>
         
-        <h3><table border="3">
+        <h3><table id="tablaGoleadores" border="3">
             <tr>
                 <th>Equipo</th>
                 <th>Jugador</th>
                 <th>Goles</th>
     
             </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Diego Arroyo</td>
+                <td>2</td>
+
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Agustin Navarro</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Alejo Osuna</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Enzo Juarez</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Fabrizio Cecchini</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Franco Favotti</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Gerardo Vaello</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Maxi Ventura</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Teo Formento</td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Tobias Winjak</td>
+                <td>1</td>
+
+            </tr>
+            
             
             
         </table></h3>
@@ -309,13 +373,19 @@ function mostrarMpvs(){
         <header id="mvpsTitulo">
             <h2>MVPS</h2>
         </header>
-        <h3><table border="3">
+        <h3><table id="tablaMVPS" border="3">
             <tr>
                 <th>Fecha</th>
                 <th>Equipo</th>
                 <th>Jugador</th>
-    
             </tr>
+            <tr>
+                <td>1</td>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>--</td>
+
+            </tr>
+            
            
         </table></h3>
     `;
@@ -332,7 +402,7 @@ mostrarTablas();
 var equipo1 = ['Franco Favotti (C)', 'Tobias Winjak', 'Manuel Panizo', 'Alejo Osuna', 'Diego Arroyo', 'Facundo Moran', 
                 'Teo Formento', 'Maxi Ventura', 'Nahuel Monti', 'Nahuel Lonero', 'Milton Cabrera'];
 
-var equipo2 = ['Agustin Navarro (C)', 'Tomas Mango', 'Juan Macchi', 'Fabrizio Cecchini', 'Lucas Garcia', 
+var equipo2 = ['Agustin Navarro (C)', 'Tomas Mango', 'Juanse Macchi', 'Fabrizio Cecchini', 'Lucas Garcia', 
                 'Jeronimo Hidalgo', 'Enzo Juarez', 'Agustin Lonero', 'Gerardo Vaello', 'Franco Mangiameli'];
 
 function mostrarTituloEquipos(){

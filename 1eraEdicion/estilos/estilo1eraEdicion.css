@@ -43,9 +43,15 @@ body{
 
 
 nav li{
-    padding: 5px;
     list-style:none;
+
+}
+
+nav li a{
+    padding: 5px;
     margin: 0px;
+    color: rgb(240, 245, 244); /* Cambia el color del enlace */
+    text-decoration: none; /* Opcional: quita el subrayado */
 }
 
 
