@@ -382,7 +382,7 @@ function mostrarMpvs(){
             <tr>
                 <td>1</td>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
-                <td>--</td>
+                <td>Diego Arroyo</td>
 
             </tr>
             
