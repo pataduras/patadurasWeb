@@ -447,11 +447,11 @@ function mostrarTablas(){
 
 mostrarTablas();
 
-var equipo1 = ['Franco Favotti (C)', 'Tobias Winjak', 'Manuel Panizo', 'Alejo Osuna', 'Diego Arroyo', 'Facundo Moran', 
-                'Teo Formento', 'Maxi Ventura', 'Nahuel Monti', 'Nahuel Lonero', 'Milton Cabrera'];
+var equipo1 = ['Franco Favotti (C)', 'Tobias Winjak', 'Alejo Osuna', 'Diego Arroyo', 'Facundo Moran', 
+                'Teo Formento', 'Maxi Ventura', 'Nahuel Monti', 'Nahuel Lonero', 'Milton Cabrera', 'Gerardo Vaello'];
 
 var equipo2 = ['Agustin Navarro (C)', 'Tomas Mango', 'Juanse Macchi', 'Fabrizio Cecchini', 'Lucas Garcia', 
-                'Jeronimo Hidalgo', 'Enzo Juarez', 'Agustin Lonero', 'Gerardo Vaello', 'Franco Mangiameli', 'Mateo Pugliese'];
+                'Jeronimo Hidalgo', 'Enzo Juarez', 'Agustin Lonero', 'Franco Mangiameli', 'Manuel Panizo', 'Mateo Pugliese'];
 
 function mostrarTituloEquipos(){
     var  planteles= document.getElementById("planteles");
@@ -512,13 +512,26 @@ function mostrarEquipos(){
 
 mostrarEquipos();
 
+
 function mostrarTransferencias(){
     var transferencias = document.getElementById("transferencias");
-    
+    transferencias.innerHTML += `
+        <h2><table border="0"><tr>
+            <td>Transferencias</td>
+            <td><img width="50px" height="30px" alt="Logo de Transferencias" src="https://pbs.twimg.com/media/GTncwkHXIAABJwC?format=png&name=small"/></td>
+        </tr></table><h2>
+
+        <h3><table border="0"><tr>
+            <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+            <td>Manuel Panizo</td>
+            <td><img width="45px" height="25px" alt="Logo de Transferencias" src="https://pbs.twimg.com/media/GTncwkHXIAABJwC?format=png&name=small"/></td>
+            <td>Gerardo Vaello</td>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+        </tr></table><h3>
+    `;
 }
 
 mostrarTransferencias();
-
 
 function mostrarFooter(){
     var footer = document.getElementById("Footer");
