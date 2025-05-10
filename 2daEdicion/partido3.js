@@ -163,7 +163,7 @@ function mostrarGolesUnidadPolenta(){
                 <td>0</td> 
             </tr>
             <tr>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>2</td> 
@@ -185,7 +185,7 @@ function mostrarGolesUnidadPolenta(){
             </tr>
             <tr>
                 
-                <td>5</td>
+                <td>4</td>
             </tr>
 
         </table>

@@ -322,18 +322,17 @@ function mostrarGoleadores(){
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Diego Arroyo</td>
                 <td>11</td>
-
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Tomas Mango</td>
-                <td>8</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Maxi Ventura</td>
                 <td>7</td>
 
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Tomas Mango</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
@@ -345,6 +344,11 @@ function mostrarGoleadores(){
                 <td>Alejo Osuna</td>
                 <td>3</td>
 
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Fabrizio Cecchini</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
@@ -362,11 +366,6 @@ function mostrarGoleadores(){
                 <td>Tobias Winjak</td>
                 <td>2</td>
 
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Fabrizio Cecchini</td>
-                <td>2</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
