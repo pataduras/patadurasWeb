@@ -4,7 +4,7 @@
 function mostrarLugarYHora(){
     var LugarYHora = document.getElementById("LugarYHora");
     LugarYHora.innerHTML += `
-        <h3><table id="sede"><tr><th><img width="30px" height="30px" alt="Hora" src="https://png.pngtree.com/png-vector/20221013/ourmid/pngtree-calendar-icon-logo-2023-date-time-png-image_6310337.png"/></th><th>Domingo 23/2, 20:00</th></tr></table><h3>
+        <h3><table id="sede"><tr><th><img width="30px" height="30px" alt="Hora" src="https://png.pngtree.com/png-vector/20221013/ourmid/pngtree-calendar-icon-logo-2023-date-time-png-image_6310337.png"/></th><th>Domingo 23/3, 20:00</th></tr></table><h3>
         <h3><table id="sede"><tr><th><img width="30px" height="30px" alt="Sede" src="https://images.vexels.com/media/users/3/140312/isolated/preview/a5a1a8894e16081a64cdbddae80aa04c-estadio-fortaleza.png"/></th><th>Sportivo Barracas, Barracas</th></tr></table><h3>
     `;
 }

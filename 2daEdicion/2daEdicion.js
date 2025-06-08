@@ -25,7 +25,7 @@ function mostrarFixture(){
         </header>
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
@@ -55,7 +55,7 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -85,7 +85,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -116,14 +116,14 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>4</td>
+                        <td>7</td>
                         <td>La Comunidad del Anillo</td>
                         <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
@@ -133,6 +133,13 @@ function mostrarFixture(){
 
             <br>
 
+            <nav>
+                    <li>
+                        <a href="partido4.html">Info del partido</a>
+                    </li>
+                
+            </nav>
+
             
         </div></h3> 
 
@@ -140,7 +147,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -163,7 +170,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -187,7 +194,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 7</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -210,7 +217,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 8</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -233,7 +240,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 9</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -256,7 +263,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 10</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -279,7 +286,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 11</h3>
-            <h4>Serie (2-1)</h4>
+            <h4>Serie (2-2)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -324,15 +331,20 @@ function mostrarGoleadores(){
                 <td>11</td>
             </tr>
             <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Tomas Mango</td>
+                <td>10</td>
+            </tr>
+            <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Maxi Ventura</td>
-                <td>7</td>
+                <td>8</td>
 
             </tr>
             <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Tomas Mango</td>
-                <td>7</td>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Franco Favotti</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
@@ -351,9 +363,10 @@ function mostrarGoleadores(){
                 <td>3</td>
             </tr>
             <tr>
-                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
-                <td>Franco Favotti</td>
-                <td>2</td>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Jeronimo Hidalgo</td>
+                <td>3</td>
+
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
@@ -364,29 +377,23 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Tobias Winjak</td>
-                <td>2</td>
+                <td>3</td>
 
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Mateo Pugliese</td>
-                <td>2</td>
+                <td>3</td>
 
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Juanse Macchi</td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Teo Formento</td>
-                <td>1</td>
-
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Jeronimo Hidalgo</td>
                 <td>1</td>
 
             </tr>
@@ -430,6 +437,12 @@ function mostrarMpvs(){
                 <td>3</td>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Mateo Pugliese</td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Juanse Macchi</td>
 
             </tr>
             
