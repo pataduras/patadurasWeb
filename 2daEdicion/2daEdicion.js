@@ -25,7 +25,7 @@ function mostrarFixture(){
         </header>
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
@@ -55,7 +55,7 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -85,7 +85,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -116,7 +116,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -147,7 +147,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -176,7 +176,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -205,14 +205,14 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 7</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>7</td>
+                        <td>9</td>
                         <td>La Comunidad del Anillo</td>
                         <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
@@ -221,6 +221,12 @@ function mostrarFixture(){
             </div>
 
             <br>
+
+            <nav>
+                    <li>
+                        <a href="partido7.html">Info del partido</a>
+                    </li>
+            </nav>
 
         </div></h3>
 
@@ -228,14 +234,14 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 8</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>4</td>
+                        <td>3</td>
                         <td>La Comunidad del Anillo</td>
                         <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
@@ -244,6 +250,12 @@ function mostrarFixture(){
             </div>
 
             <br>
+
+            <nav>
+                    <li>
+                        <a href="partido8.html">Info del partido</a>
+                    </li>
+            </nav>
 
         </div></h3>
 
@@ -251,14 +263,14 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 9</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
                         <td><img  width="35px" height="40px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                         <td>Astros de la Gambeta</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>10</td>
+                        <td>3</td>
                         <td>La Comunidad del Anillo</td>
                         <td><img  width="35px" height="38px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
 
@@ -268,13 +280,19 @@ function mostrarFixture(){
 
             <br>
 
+            <nav>
+                    <li>
+                        <a href="partido9.html">Info del partido</a>
+                    </li>
+            </nav>
+
         </div></h3>
 
         <br><br>
 
         <h3><div class="article">
             <h3>Fecha 10</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -297,7 +315,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 11</h3>
-            <h4>Serie (2-4)</h4>
+            <h4>Serie (4-5)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -337,53 +355,49 @@ function mostrarGoleadores(){
     
             </tr>
             <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Tomas Mango</td>
-                <td>15</td>
-            </tr>
-            <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Diego Arroyo</td>
-                <td>14</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Tomas Mango</td>
+                <td>16</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Maxi Ventura</td>
-                <td>10</td>
-
+                <td>14</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Mateo Pugliese</td>
-                <td>7</td>
-
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
-                <td>Franco Favotti</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
-                <td>Tobias Winjak</td>
-                <td>4</td>
-
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Juanse Macchi</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Enzo Juarez</td>
-                <td>4</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Alejo Osuna</td>
-                <td>4</td>
-
+                <td>7</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Enzo Juarez</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Tobias Winjak</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Franco Mangiameli</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Juanse Macchi</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>
@@ -391,18 +405,23 @@ function mostrarGoleadores(){
                     <img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/>
                 </td>
                 <td>Fabrizio Cecchini</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Franco Favotti</td>
                 <td>4</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Jeronimo Hidalgo</td>
-                <td>3</td>
+                <td>4</td>
 
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Agustin Navarro</td>
-                <td>2</td>
+                <td>3</td>
 
             </tr>
             <tr>
@@ -418,13 +437,7 @@ function mostrarGoleadores(){
                 </td>
                 <td>Gerardo Vaello</td>
                 <td>1</td>
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Franco Mangiameli</td>
-                <td>1</td>
-            </tr>
-            
+            </tr>            
             
         </table></h3>
     `;
@@ -477,8 +490,22 @@ function mostrarMpvs(){
                 <td>6</td>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Franco Mangiameli</td>
-
             </tr>
+            <tr>
+                <td>7</td>
+                <td><img width="25px" height="25px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"></td>
+                <td>Mateo Pugliese</ td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Alejo Osuna</td>
+            </tr>  
+            <tr>
+                <td>8</td>
+                <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
+                <td>Diego Arroyo</td>
+            </tr>  
             
            
         </table></h3>
