@@ -1,169 +1,556 @@
+:root{
+    --bg: #0b1020;
+    --card: rgba(255,255,255,0.04);
+    --accent: #7b1fa2;
+    --accent-2: #39d353;
+    --muted: #cdd6e0;
+
+    --tab-bg: rgba(255,255,255,0.06);
+    --tab-bg-active: var(--accent);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
 body {
-    background: rgb(15, 56, 19);
-    background-image: url('https://pbs.twimg.com/media/GgfbvluW4AA-iTQ?format=jpg&name=medium');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: radial-gradient(circle at top, #1a1a3a 0%, #0b1020 70%);
+    color: var(--muted);
+    -webkit-font-smoothing: antialiased;
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    font-size: 16px; /* Aumentado para mejor visibilidad */
-    color: #ffffff; /* Blanco para mejor contraste */
-    margin: 0;
-    padding: 0;
+}
+
+/* ===== MODO CLARO (fondo liso) ===== */
+body.light {
+    --bg: #ffffff;
+    --card: rgba(0,0,0,0.07);
+    --accent: #5a2ca0;
+    --accent-2: #1e8f3b;
+    --muted: #1a1a1a;
+
+    --tab-bg: rgba(0,0,0,0.05);
+    --tab-bg-active: var(--accent);
+
+    background: #ffffff; /* Fondo liso */
+    color: var(--muted);
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
+
+.site-header {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari fix */
 }
 
-#Titulo {
-    height: 100px;
-    width: 100%;
+.site-header .main-nav {
+    position: absolute;
+    right: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.brand-logo {
+    width: 90px;     /* antes 56px — ahora bastante más grande */
+    height: 90px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.logo-sm {
+    width: 30px;
+    height: 30px;
+}
+
+.team-logo {
+    width: 90px;
+    display: block;
+    margin: 0 auto 10px auto; /* 💥 centrado perfecto */
+}
+
+.brand h1 {
+    font-size: 40px;    /* antes 20px */
+    font-weight: 900;
+    color: var(--accent);
     margin: 0;
-    text-align: center;
-    line-height: 100px;
-    font-size: 24px; /* Más grande para mejor visibilidad */
-    font-weight: bold;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra más grande */
-    color: rgb(202, 156, 5);
-
 }
 
-#Logo {
-    text-align: center;
+.theme-btn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.theme-btn:hover {
+    transform: scale(1.08);
+}
+
+.theme-btn .icon {
+    width: 26px;
+    height: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+}
+
+/* Íconos */
+body:not(.dark) .theme-btn .icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/869/869869.png"); /* sol */
+}
+
+body.dark .theme-btn .icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/526/526202.png"); /* luna */
+}
+
+
+/* ========================= */
+/* TABS                      */
+/* ========================= */
+
+.tabs {
     display: flex;
     justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari fix */
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.tab-btn {
+    background: var(--tab-bg);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+    transition: 0.2s;
+}
+
+.tab-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.tab-btn.active {
+    background: var(--tab-bg-active);
+    color: white;
+}
+
+/* ========================= */
+/* PANEL DE CONTENIDO        */
+/* ========================= */
+
+.tab-content {
+    max-width: 1000px;
+    margin: 20px auto 50px auto;
+    padding: 24px;
+}
+
+/* ========================= */
+/* CARD                      */
+/* ========================= */
+
+.card {
+    background: linear-gradient(180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.02)
+    );
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+body.light .card {
+    background: #f5f5f5;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin: 0 0 16px 0;
+    letter-spacing: .5px;
+}
+
+/* ========================= */
+/* TABLES (MVPs)             */
+/* ========================= */
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table .team-logo-sm {
+    width: 40px;   /* antes 30px */
+    height: 40px;  /* antes 30px */
+}
+
+.stats-table th {
+    text-align: center;
+}
+.stats-table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+}
+
+body.light .stats-table td,
+body.light .stats-table th {
+    border-color: rgba(0,0,0,0.08);
+}
+
+.stats-table th {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ========================= */
+/* FIXTURE MATCHES           */
+/* ========================= */
+
+.fixture-date-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent);
+    max-width: 600px;   /* el mismo ancho que usan los partidos */
+    margin: 0 auto;     /* centrar ese ancho */
+    text-align: left;   /* alinear texto a la izquierda */
+    padding-left: 130px;  /* pequeño ajuste para que coincida PERFECTO */
+}
+
+.fixture-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+
+
+
+.match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+body.light .match {
+    background: rgba(0,0,0,0.05);
+}
+
+.match:hover {
+    background: rgba(255,255,255,0.09);
+    transform: translateY(-2px);
+}
+
+.match .teams {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.match .score {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent-2);
+    min-width: 60px;
+    text-align: center;
+}
+
+.match a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--muted);
+}
+
+/* Contenedor general del partido */
+.match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* === BLOQUE A === */
+.match-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Fecha + Serie centrados */
+.fecha-serie {
+    text-align: center;
+    font-weight: bold;
+}
+
+.fecha-title {
+    font-size: 1.1rem;
+}
+
+.serie-title {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Equipos + Resultado (como antes) */
+.teams-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Resultado */
+.score {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* === BLOQUE B === */
+.match-right {
+    display: flex;
     align-items: center;
 }
 
-.grid-layout{
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8); /* Sombra más grande */
-    background-color: rgba(19, 18, 18, 0.7); /* Fondo oscuro semitransparente */
-}
-
-#golesTitulo, #mvpsTitulo, #equiposTitulo, #fixtureTitulo{
-    color: rgb(202, 156, 5);
-    font-size: 20px;
-
-}
-
-#tablaGoleadores, #tablaMVPS{
-    text-align: center;
-}
-    
-.fixture {
-    padding: 15px;
-    border-radius: 10px;
-    color: #ffffff;
-    text-align: left;
-    font-size: 40px; /* Reducido el tamaño de las letras en el Fixture */
-}
-
-.escudoAstrosGambeta{
-    padding: 8px
-}
-
-.escudoComunidadAnillo{
-    padding: 8px
-}
-
-nav li{
-    list-style:none;
-
-}
-
-nav li a{
-    padding: 5px;
-    margin: 0px;
-    color: rgb(240, 245, 244); /* Cambia el color del enlace */
-    text-decoration: none; /* Opcional: quita el subrayado */
-}
 
 
-.footer{
+/* ========================= */
+/* EQUIPOS                   */
+/* ========================= */
+
+.team-block {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 2px solid var(--accent); /* 💥 borde completo, no solo izquierda */
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .grid-layout {
-        display: grid;
-        width: 80%;
-        margin: 0 auto;
-        grid-template-columns: 55% 40%;
-        grid-template-rows: 98% 2%;
-    }
-   
 
-    .fixture {
-        grid-column: 1;
-        font-size: 14px; /* Reducido el tamaño de las letras en el Fixture */
-    }
-
-    .derecha {
-        grid-column: 2;
-        font-size: 15px;
-        margin-left: 20%;
-        grid-row: 1;
-
-    }
-    #golesTitulo, #mvpsTitulo, #equiposTitulo, #fixtureTitulo{
-        color: rgb(202, 156, 5);
-        font-size: 20px;
-    
-    }
-    
+.team-players {
+    margin-top: 8px;
+    padding-left: 0; /* Eliminamos sangría */
+    list-style: none; /* Se ve más limpio */
 }
 
-@media (max-width: 768px) {
-    .grid-layout {
-        display: grid;
-        width: 100%;
-        margin: 0 auto;
-        grid-template-columns: 100%;
-    }
+.team-players li {
+    margin-bottom: 4px;
+}
 
-    #Titulo {
-        height: 100px;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        line-height: 100px;
-        font-size: 15px; /* Más grande para mejor visibilidad */
-        font-weight: bold;
-        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra más grande */
-        color: rgb(202, 156, 5);
-    
-    }
-
-    .fixture {
-        text-align: center;
-        font-size: 16px; /* Reducido el tamaño de las letras en el Fixture */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 80%; /* Ajuste para no ocupar todo el ancho */
-        margin: 0 auto; /* Centrado horizontal */
-    }
-
-    .derecha {
-        text-align: center;
-        font-size: 16px; /* Reducido el tamaño de las letras en el Fixture */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 80%; /* Ajuste para no ocupar todo el ancho */
-        margin: 0 auto; /* Centrado horizontal */
-    }
+.uniform-info {
+    margin-top: 12px;
+    font-size: 16px;
+    color: var(--muted);
+    text-align: center;
 }
 
 
-@media (max-width: 576px) {
-    .campeon {
-        font-size: 14px;
+.transfers {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.transfers p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* ========================= */
+/* FOOTER                    */
+/* ========================= */
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+.info-btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.info-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* ========================================================= */
+/*          RESPONSIVE REAL (mobile-first improvements)       */
+/* ========================================================= */
+
+/* ---------- Móviles grandes (≤ 850px) ---------- */
+@media(max-width: 850px){
+
+    .tab-content {
+        padding: 16px;
+        margin: 10px;
     }
 
-    .fixture {
+    .card h2 {
+        font-size: 22px;
         text-align: center;
     }
+
+    .brand h1 { font-size: 28px; }
+    .brand-logo { width: 70px; height: 70px; }
+
+    .fixture-date-title {
+        padding-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+/* ---------- Tablets y móviles medianos (≤ 700px) ---------- */
+@media(max-width: 700px){
+
+    /* Header en dos filas */
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .site-header .main-nav {
+        position: static;
+    }
+
+    /* Tabs scrollables */
+    .tabs {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+    }
+
+    /* Partidos más compactos */
+    .match {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 10px;
+        text-align: center;
+    }
+
+    .match .teams {
+        justify-content: center;
+    }
+
+    .match a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ---------- Móviles chicos (≤ 600px) ---------- */
+@media(max-width: 600px){
+
+    /* Fixture: BLOQUE A arriba — BLOQUE B abajo */
+    .match-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .match-left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .match-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .score {
+        font-size: 1.4rem;
+        min-width: auto;
+    }
+
+    .logo-sm { width: 26px; height: 26px; }
+}
+
+/* ---------- Móviles muy chicos (≤ 480px) ---------- */
+@media(max-width: 480px){
+
+    .brand h1 { font-size: 18px; }
+    .brand-logo { width: 50px; height: 50px; }
+
+    .tabs {
+        padding: 10px;
+        gap: 4px;
+    }
+
+    /* Tablas scroll horizontal */
+    .stats-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .team-block {
+        padding: 12px;
+    }
+
+    .team-logo { width: 70px; }
+
+    .fixture-date-title {
+        font-size: 16px;
+    }
+}
+
+/* ---------- Ultra-mini (≤ 360px) ---------- */
+@media(max-width: 360px){
+    body { font-size: 14px; }
+    .tab-btn { padding: 8px 10px; }
+    .brand-logo { width: 42px; height: 42px; }
 }

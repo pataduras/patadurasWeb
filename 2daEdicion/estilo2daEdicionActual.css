@@ -1,0 +1,385 @@
+body {
+    background: rgb(15, 56, 19);
+    background-image: url('https://pbs.twimg.com/media/GgfbvluW4AA-iTQ?format=jpg&name=medium');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#Titulo {
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    color: rgb(202, 156, 5);
+}
+
+#Logo {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-layout{
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+    background-color: rgba(19, 18, 18, 0.7);
+}
+
+#golesTitulo, #mvpsTitulo, #equiposTitulo, #fixtureTitulo{
+    color: rgb(202, 156, 5);
+    font-size: 20px;
+}
+
+#tablaGoleadores, #tablaMVPS{
+    text-align: center;
+}
+    
+.fixture {
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 40px;
+}
+
+/* Estilos para la Gran Final */
+/* Estilos para la Gran Final */
+.campeon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gran-final {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(202, 156, 5, 0.2), rgba(255, 215, 0, 0.3));
+    border: 3px solid rgb(202, 156, 5);
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 30px rgba(202, 156, 5, 0.6);
+    animation: pulse 2s infinite;
+    max-width: 900px;
+    width: 90%;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(202, 156, 5, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(202, 156, 5, 0.9);
+    }
+}
+
+.fecha-final {
+    font-size: 28px !important;
+    font-weight: bold;
+    color: rgb(202, 156, 5);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.titulo-gran-final {
+    font-size: 36px !important;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 15px 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    to {
+        text-shadow: 0 0 20px #FFA500, 0 0 30px #FFA500, 0 0 40px #FFA500;
+    }
+}
+
+.gran-final h4 {
+    font-size: 20px !important;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Nuevo diseño del resultado */
+.resultado-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.equipo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.nombre-equipo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.marcador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0.8;
+    justify-content: center;
+}
+
+.goles {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    min-width: 50px;
+    text-align: center;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(202, 156, 5);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.gran-final table {
+    font-size: 20px !important;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.gran-final table td {
+    padding: 15px 10px;
+    font-weight: bold;
+}
+
+.escudoAstrosGambeta{
+    padding: 8px
+}
+
+.escudoComunidadAnillo{
+    padding: 8px
+}
+
+nav li{
+    list-style:none;
+}
+
+nav li a{
+    padding: 5px;
+    margin: 0px;
+    color: rgb(240, 245, 244);
+    text-decoration: none;
+}
+
+.footer{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .grid-layout {
+        display: grid;
+        width: 80%;
+        margin: 0 auto;
+        grid-template-columns: 55% 40%;
+        grid-template-rows: 98% 2%;
+    }
+
+    .fixture {
+        grid-column: 1;
+        font-size: 14px;
+    }
+
+    .derecha {
+        grid-column: 2;
+        font-size: 15px;
+        margin-left: 20%;
+        grid-row: 1;
+    }
+    
+    #golesTitulo, #mvpsTitulo, #equiposTitulo, #fixtureTitulo{
+        color: rgb(202, 156, 5);
+        font-size: 20px;
+    }
+
+    .fecha-final {
+        font-size: 32px !important;
+    }
+
+    .titulo-gran-final {
+        font-size: 42px !important;
+    }
+
+    .nombre-equipo {
+        font-size: 22px;
+    }
+
+    .goles {
+        font-size: 56px;
+    }
+
+    .vs {
+        font-size: 28px;
+    }
+
+    /* Mantener todos los equipos con escudo arriba en pantallas grandes */
+    .equipo-izquierda,
+    .equipo-derecha {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-layout {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 100%;
+    }
+
+    #Titulo {
+        height: 100px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        line-height: 100px;
+        font-size: 15px;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        color: rgb(202, 156, 5);
+    }
+
+    .fixture {
+        text-align: center;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .derecha {
+        text-align: center;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .fecha-final {
+        font-size: 24px !important;
+    }
+
+    .titulo-gran-final {
+        font-size: 28px !important;
+        letter-spacing: 2px;
+    }
+
+    .gran-final table {
+        font-size: 16px !important;
+    }
+
+    .resultado-final {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .equipo-contenedor {
+        width: 100%;
+    }
+
+    .equipo-contenedor img {
+        width: 50px !important;
+        height: auto !important;
+    }
+
+    .nombre-equipo {
+        font-size: 18px;
+    }
+
+    .marcador {
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .goles {
+        font-size: 42px;
+    }
+
+    .vs {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .campeon {
+        font-size: 14px;
+    }
+
+    .fixture {
+        text-align: center;
+    }
+
+    .fecha-final {
+        font-size: 20px !important;
+    }
+
+    .titulo-gran-final {
+        font-size: 24px !important;
+        letter-spacing: 1px;
+    }
+
+    .nombre-equipo {
+        font-size: 16px;
+    }
+
+    .goles {
+        font-size: 36px;
+    }
+
+    .vs {
+        font-size: 18px;
+    }
+
+    .resultado-final {
+        padding: 20px 10px;
+    }
+}
