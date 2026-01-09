@@ -64,7 +64,8 @@ nav li a{
 }
 
 .campeon{
-    color: #a08407;
+    color: #f6cf20;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -232,8 +233,6 @@ nav li a{
     .derecha{
         grid-column: 1;
         font-family: Arial, sans-serif; font-size: 14px;
-        
-
     }
 
     #mvps{

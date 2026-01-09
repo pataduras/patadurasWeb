@@ -465,7 +465,7 @@ function mostrarCampeon(){
     campeon.innerHTML +=
     `
         <h1>
-            <table border="0"><tr><td>CAMPEON: UNIDAD POLENTA</td><td><img width="30px" height="30px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td></tr></table>
+            <table border="0"><tr><td>CAMPEON: UNIDAD POLENTA</td><td><img width="45px" height="45px" alt="Logo de Unidad Polenta" src="https://pbs.twimg.com/media/GTctxuDXIAAE9WS?format=png&name=small"/></td></tr></table>
 
         </h1>
     `;

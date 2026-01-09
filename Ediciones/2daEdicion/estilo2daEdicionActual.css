@@ -207,10 +207,12 @@ nav li a{
     font-size: 22px;       /* ajustá el tamaño a gusto */
     font-weight: bold;    /* opcional */
     color: rgb(239, 184, 1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .campeon{
-    color: #a08407;
+    color: #f6cf20;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);    
 }
 
 .footer{

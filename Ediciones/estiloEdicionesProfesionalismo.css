@@ -52,13 +52,15 @@ nav#menu ul li {
 
 nav#menu ul li a {
     text-decoration: none;
-    color: #ffeb3b; /* Amarillo brillante */
+    color: #fee828; /* Amarillo brillante */
     font-weight: bold;
-    font-size: 34px; /* Tamaño de fuente mayor */
+    font-size: 34px;
     display: block;
     transition: color 0.3s, background-color 0.3s;
     padding: 12px;
     border-radius: 5px;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 nav#menu ul li a:hover {
