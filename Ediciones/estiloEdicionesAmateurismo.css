@@ -100,7 +100,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 22px; /* Reduce el tamaño de los enlaces */
+        font-size: 34px; /* Reduce el tamaño de los enlaces */
         padding: 12px; /* Ajusta el padding */
     }
 
@@ -124,7 +124,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 22px; /* Texto más pequeño para enlaces */
+        font-size: 34px; /* Texto más pequeño para enlaces */
         padding: 12px; /* Ajusta el padding */
 
     }
@@ -145,7 +145,7 @@ footer#Footer {
     }
 
     nav#menu ul li a {
-        font-size: 22px; /* Ajuste intermedio para enlaces */
+        font-size: 34px; /* Ajuste intermedio para enlaces */
         padding: 12px; /* Ajusta el padding */
 
     }

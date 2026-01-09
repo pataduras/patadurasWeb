@@ -270,6 +270,8 @@ nav li a{
     .equipo-derecha {
         flex-direction: column;
     }
+
+
 }
 
 @media (max-width: 768px) {
@@ -359,11 +361,12 @@ nav li a{
     .vs {
         font-size: 20px;
     }
+    
 }
 
 @media (max-width: 576px) {
     .campeon {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .fixture {
@@ -377,6 +380,13 @@ nav li a{
     .titulo-gran-final {
         font-size: 24px !important;
         letter-spacing: 1px;
+    }
+
+    .gran-final {
+        width: 85%;              /* más angosta */
+        margin: 15px auto;       /* margen automático a ambos lados */
+        padding: 20px 15px;      /* menos padding */
+        border-width: 2px;       /* borde más fino */
     }
 
     .nombre-equipo {
@@ -394,4 +404,7 @@ nav li a{
     .resultado-final {
         padding: 20px 10px;
     }
+
+
+
 }
