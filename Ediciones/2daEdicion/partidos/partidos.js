@@ -378,6 +378,45 @@ const PARTIDOS_DB = {
                 ]
             }
         ]
+    },
+
+    11: {
+        lugarYHora: {
+            fecha: "Sábado 20/12, 15:00",
+            estadio: "Sportivo Barracas, Barracas"
+        },
+        equipos: [
+            {
+                nombre: "Astros de la Gambeta",
+                logo: "https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360",
+                goles: 3,
+                jugadores: [
+                    { nombre: "Franco Favotti", goles: 0 },
+                    { nombre: "Fabrizio Cecchini", goles: 0 },
+                    { nombre: "Diego Arroyo", goles: 1 },
+                    { nombre: "Alejo Osuna", goles: 1 },
+                    { nombre: "Maxi Ventura", goles: 1 },
+                    { nombre: "Facundo Moran", goles: 0 },
+                    { nombre: "Nahuel Monti", goles: 0 },
+                    { nombre: "Joni Monti", goles: 0 }
+                ]
+            },
+            {
+                nombre: "La Comunidad del Anillo",
+                logo: "https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small",
+                goles: 5,
+                jugadores: [
+                    { nombre: "Agustin Navarro", goles: 0 },
+                    { nombre: "Jeronimo Hidalgo", goles: 0 },
+                    { nombre: "Juanse Macchi", goles: 0 },
+                    { nombre: "Tomas Mango", goles: 2 },
+                    { nombre: "Mateo Pugliese", goles: 1 },
+                    { nombre: "Franco Mangiameli", goles: 2 },
+                    { nombre: "Enzo Juarez", goles: 0 },
+                    { nombre: "Agustin Lonero", goles: 0 },
+                ]
+            }
+        ]
     }
 };
 

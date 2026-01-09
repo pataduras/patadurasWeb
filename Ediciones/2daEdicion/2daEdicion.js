@@ -25,7 +25,7 @@ function mostrarFixture(){
         </header>
         <h3><div class="article">
             <h3>Fecha 1</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja '>
                 <table border="2">
                     <tr>
@@ -55,7 +55,7 @@ function mostrarFixture(){
         
         <h3><div class="article">
             <h3>Fecha 2</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -85,7 +85,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 3</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -116,7 +116,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 4</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -147,7 +147,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 5</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -176,7 +176,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 6</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -205,7 +205,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 7</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -234,7 +234,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 8</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -263,7 +263,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 9</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -292,7 +292,7 @@ function mostrarFixture(){
 
         <h3><div class="article">
             <h3>Fecha 10</h3>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             <div class = 'caja'>
                 <table border="2">
                     <tr>
@@ -342,22 +342,22 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Diego Arroyo</td>
-                <td>29</td>
+                <td>30</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Maxi Ventura</td>
-                <td>17</td>
+                <td>18</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Tomas Mango</td>
-                <td>16</td>
+                <td>18</td>
             </tr>
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
                 <td>Mateo Pugliese</td>
-                <td>10</td>
+                <td>11</td>
             </tr>
             <tr>
                 <td>
@@ -370,6 +370,11 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Alejo Osuna</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
+                <td>Franco Mangiameli</td>
                 <td>8</td>
             </tr>
             <tr>
@@ -380,11 +385,6 @@ function mostrarGoleadores(){
             <tr>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Tobias Winjak</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td><img width="30px" height="30px" alt="Logo de la Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td>
-                <td>Franco Mangiameli</td>
                 <td>6</td>
             </tr>
             <tr>
@@ -504,11 +504,15 @@ function mostrarMpvs(){
                 <td>Diego Arroyo</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td>10</td>
                 <td><img width="30px" height="30px" alt="Logo de Astros de la Gambeta" src="https://pbs.twimg.com/media/GjoHU1wXwAANOJr?format=png&name=360x360"/></td>
                 <td>Nahuel Monti</td>
             </tr>   
-            
+            <tr>
+                <td>11</td>
+                <td><img width="25px" height="25px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"></td>
+                <td>Franco Mangiameli</td>
+            </tr>
            
         </table></h3>
     `;
@@ -618,12 +622,12 @@ mostrarTransferencias();
 
 
 function mostrarGranFinal(){
-    var campeon = document.getElementById("Campeon");
+    var campeon = document.getElementById("Final");
     campeon.innerHTML = `
         <div class="article gran-final">
             <h3 class="fecha-final">Fecha 11</h3>
             <h2 class="titulo-gran-final">🏆 GRAN FINAL 🏆</h2>
-            <h4>Serie (5-5)</h4>
+            <h4>Serie (5-6)</h4>
             
             <div class='resultado-final'>
                 <div class="equipo-contenedor equipo-izquierda">
@@ -632,22 +636,47 @@ function mostrarGranFinal(){
                 </div>
                 
                 <div class="marcador">
-                    <span class="goles">-</span>
+                    <span class="goles">3</span>
                     <span class="vs">VS</span>
-                    <span class="goles">-</span>
+                    <span class="goles">5</span>
                 </div>
                 
                 <div class="equipo-contenedor equipo-derecha">
                     <img width="60px" height="63px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/>
                     <span class="nombre-equipo">La Comunidad del Anillo</span>
                 </div>
+                
             </div>
             <br>
+            <br>
+
+            <nav>
+                    <li>
+                        <a class="info-partido" href="partidos/partido.html?partido=11">Info del partido</a>
+                    </li>
+            </nav>
+
+            
         </div>
     `;
 }
 
 mostrarGranFinal();
+
+function mostrarCampeon(){
+    var campeon = document.getElementById("Campeon");
+    campeon.innerHTML +=
+    `
+        <h1>
+            <table border="0"><tr><td>CAMPEÓN: LA COMUNIDAD DEL ANILLO</td><td><img width="60px" height="63px" alt="La Comunidad del Anillo" src="https://pbs.twimg.com/media/Gjq34pIXcAAYx-K?format=png&name=small"/></td></tr></table>
+
+        </h1>
+    `;
+
+}
+
+mostrarCampeon();
+
 
 function mostrarFooter(){
     var footer = document.getElementById("Footer");

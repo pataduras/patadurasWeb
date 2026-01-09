@@ -42,7 +42,8 @@ const FIXTURE = [
     { fecha:7, local:T('astros'), visitante:T('comunidad'), goles_local:7, goles_visitante:9, link:'partidos/partido.html?partido=7' },
     { fecha:8, local:T('astros'), visitante:T('comunidad'), goles_local:4, goles_visitante:3, link:'partidos/partido.html?partido=8' },
     { fecha:9, local:T('astros'), visitante:T('comunidad'), goles_local:10, goles_visitante:3, link:'partidos/partido.html?partido=9' },
-    { fecha:10, local:T('astros'), visitante:T('comunidad'), goles_local:13, goles_visitante:1, link:'partidos/partido.html?partido=10' }
+    { fecha:10, local:T('astros'), visitante:T('comunidad'), goles_local:13, goles_visitante:1, link:'partidos/partido.html?partido=10' },
+    { fecha:11, local:T('astros'), visitante:T('comunidad'), goles_local:3, goles_visitante:5, link:'partidos/partido.html?partido=11' }
 ];
 
 /* ================================

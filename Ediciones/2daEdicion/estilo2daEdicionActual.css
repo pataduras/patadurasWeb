@@ -203,6 +203,16 @@ nav li a{
     text-decoration: none;
 }
 
+.info-partido {
+    font-size: 22px;       /* ajustá el tamaño a gusto */
+    font-weight: bold;    /* opcional */
+    color: rgb(239, 184, 1);
+}
+
+.campeon{
+    color: #a08407;
+}
+
 .footer{
     text-align: center;
 }
