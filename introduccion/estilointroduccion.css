@@ -1,48 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;900&display=swap');
+
+/* ── VARIABLES ── */
+:root {
+    --bg:            #080c18;
+    --surface:       rgba(255,255,255,0.04);
+    --surface-hover: rgba(255,255,255,0.07);
+    --border:        rgba(255,255,255,0.07);
+    --accent:        #e63946;
+    --accent-glow:   rgba(230,57,70,0.22);
+    --accent2:       #4cc9f0;
+    --gold:          #ffd60a;
+    --muted:         #a8b2c1;
+    --text:          #e8edf5;
+    --shadow:        0 8px 32px rgba(0,0,0,0.5);
+}
+
+body.light {
+    --bg:            #f0f2f7;
+    --surface:       rgba(255,255,255,0.9);
+    --surface-hover: rgba(255,255,255,1);
+    --border:        rgba(0,0,0,0.09);
+    --accent:        #c1121f;
+    --accent-glow:   rgba(193,18,31,0.12);
+    --accent2:       #0096c7;
+    --gold:          #c8870a;
+    --muted:         #556070;
+    --text:          #1a1f2e;
+    --shadow:        0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: #0f3813; /* Fondo verde oscuro */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #f1f1f1; /* Blanco humo para contraste */
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(ellipse at 15% 0%,   rgba(230,57,70,0.07)  0%, transparent 55%),
+        radial-gradient(ellipse at 85% 100%, rgba(76,201,240,0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    font-weight: bold; /* Aumenta el grosor de la fuente */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
-    align-items: center; /* Centra el contenido en la página */
-    text-align: center; /* Asegura que el texto también esté centrado */
+    -webkit-font-smoothing: antialiased;
 }
 
-#Titulo{
-    font-size: 50px
-}
-
-/* Estilo para el título */
-h1 {
-    font-size: 2.5rem;
-    color: #ffffff; /* Blanco para contraste */
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
-}
-
-/* Estilo para la imagen */
-.img-container {
-    width: 60%; /* Define el ancho de la imagen */
-    max-width: 800px; /* Limita el tamaño máximo */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+/* ══════════════════════════════════
+   HEADER
+══════════════════════════════════ */
+.site-header {
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,12,24,0.75);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+body.light .site-header { background: rgba(240,242,247,0.88); }
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    font-size: 18px;
+    color: var(--muted);
+    text-decoration: none;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    transition: all 0.2s;
+}
+.back-btn:hover { color: var(--text); border-color: var(--accent2); }
+
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-logo {
+    width: 60px; height: 60px;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px var(--accent-glow));
+}
+.brand-text { display: flex; flex-direction: column; }
+.brand-subtitle {
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent);
+}
+.brand-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px; line-height: 1;
+    color: var(--text); letter-spacing: 2px;
+}
+.edition-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 4px;
+    margin-top: 3px; width: fit-content;
 }
 
-.img-container img {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: 300px; /* Ajusta la altura */
-    object-fit: cover; /* Recorta la imagen para que mantenga proporción sin deformarse */
+/* Theme toggle */
+.theme-btn {
+    position: fixed;
+    top: 16px; right: 16px;
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; z-index: 200;
+}
+.theme-btn:hover { background: var(--surface-hover); transform: scale(1.1); }
+.theme-btn .icon {
+    width: 22px; height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body:not(.light) .theme-btn .icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/869/869869.png");
+}
+body.light .theme-btn .icon {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/526/526202.png");
+}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img-wrap {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.hero-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
     display: block;
-    border-radius: 10px; /* Opcional: bordes redondeados para un mejor diseño */
+    filter: brightness(0.45) saturate(0.8);
+}
+/* Gradient overlay fading into background */
+.hero-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
 }
 
-@media (max-width:768px){
-    #Titulo{
-        font-size: 35px;
-    }
+.hero-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px 32px 32px;
+    z-index: 1;
+    text-align: center;
+}
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 8vw, 72px);
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+.hero-sub {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* ══════════════════════════════════
+   DOCUMENT CONTENT
+══════════════════════════════════ */
+.doc-content {
+    flex: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    width: 100%;
+}
+
+/* ── SECTION ── */
+.doc-section {
+    margin-bottom: 52px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease both;
+}
+.doc-section:nth-child(1) { animation-delay: 0.05s; }
+.doc-section:nth-child(2) { animation-delay: 0.12s; }
+.doc-section:nth-child(3) { animation-delay: 0.18s; }
+.doc-section:nth-child(4) { animation-delay: 0.24s; }
+.doc-section:nth-child(5) { animation-delay: 0.30s; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── HEADINGS ── */
+.doc-h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.doc-h2::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent), transparent);
+}
+
+.doc-h3 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--accent2);
+    margin: 28px 0 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.doc-h4 {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+/* ── PARAGRAPHS ── */
+.doc-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+.doc-section p strong { color: var(--text); }
+
+/* ── RULE GROUPS ── */
+.rule-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* ── LISTS ── */
+.doc-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.doc-list li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+    padding-left: 4px;
+}
+.doc-list li::marker { color: var(--accent); font-weight: 700; }
+.doc-list li strong { color: var(--text); }
+
+/* ── PRIZE CARD ── */
+.prize-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: linear-gradient(135deg, rgba(255,214,10,0.07), rgba(230,57,70,0.05));
+    border: 1px solid rgba(255,214,10,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 0 32px rgba(255,214,10,0.08);
+    margin-top: 16px;
+}
+.prize-icon {
+    font-size: 48px;
+    flex-shrink: 0;
+    line-height: 1;
+    filter: drop-shadow(0 2px 8px rgba(255,214,10,0.4));
+}
+.prize-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+.prize-text p {
+    font-size: 14px !important;
+    line-height: 1.7;
+    color: var(--muted) !important;
+    margin: 0 !important;
+}
+.prize-text p strong { color: var(--text) !important; }
+
+/* ── FOOTER ── */
+.site-footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 700px) {
+    .brand-logo  { width: 46px; height: 46px; }
+    .brand-title { font-size: 22px; }
+    .back-btn    { left: 12px; }
+    .hero-img-wrap { height: 220px; }
+    .hero-caption  { padding: 16px 20px 24px; }
+    .doc-content   { padding: 32px 16px 60px; }
+    .prize-card { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+    .brand-subtitle { display: none; }
+    .doc-h2 { font-size: 24px; }
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prode — Liga de los Pataduras</title>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080c18; --surface: rgba(255,255,255,0.05); --border: rgba(255,255,255,0.08);
+            --accent: #e63946; --accent-glow: rgba(230,57,70,0.25);
+            --gold: #ffd60a; --muted: #a8b2c1; --text: #e8edf5;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(ellipse at 50% 20%, rgba(255,214,10,0.07) 0%, transparent 60%);
+            background-attachment: fixed;
+            color: var(--text); min-height: 100svh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .back-btn {
+            position: fixed; top: 20px; left: 20px;
+            font-size: 18px; color: var(--muted); text-decoration: none;
+            width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border); border-radius: 8px;
+            background: var(--surface); transition: all 0.2s;
+        }
+        .back-btn:hover { color: var(--text); }
+
+        .icon { font-size: 64px; margin-bottom: 16px;
+            animation: bounce 2s ease-in-out infinite; }
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 56px; letter-spacing: 3px; color: var(--text);
+            margin-bottom: 8px;
+        }
+        .badge {
+            display: inline-block; margin-bottom: 20px;
+            background: rgba(255,214,10,0.12); color: var(--gold);
+            border: 1px solid rgba(255,214,10,0.3);
+            font-size: 11px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+        }
+        p { font-size: 15px; color: var(--muted); max-width: 420px; line-height: 1.7; margin-bottom: 32px; }
+
+        .rules {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 16px; padding: 24px; max-width: 420px;
+            text-align: left;
+        }
+        .rules h3 {
+            font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+            letter-spacing: 1px; color: var(--text); margin-bottom: 14px;
+        }
+        .rule-row {
+            display: flex; align-items: center; gap: 12px;
+            padding: 10px 0; border-bottom: 1px solid var(--border);
+        }
+        .rule-row:last-child { border-bottom: none; }
+        .rule-pts {
+            font-family: 'Bebas Neue', sans-serif; font-size: 28px;
+            color: var(--gold); min-width: 40px; text-align: center;
+        }
+        .rule-desc { font-size: 13px; color: var(--muted); line-height: 1.4; }
+        .rule-desc strong { color: var(--text); }
+    </style>
+</head>
+<body>
+    <a class="back-btn" href="../index.html">←</a>
+    <div class="icon">🎯</div>
+    <h1>Prode</h1>
+    <span class="badge">Próximamente</span>
+    <p>Predecí el resultado exacto y los goleadores de cada fecha. Se habilita cuando comienza cada jornada.</p>
+
+    <div class="rules">
+        <h3>Sistema de puntos</h3>
+        <div class="rule-row">
+            <span class="rule-pts">3</span>
+            <span class="rule-desc"><strong>Resultado exacto</strong><br>Acertás el marcador final exacto</span>
+        </div>
+        <div class="rule-row">
+            <span class="rule-pts">1</span>
+            <span class="rule-desc"><strong>Ganador correcto</strong><br>Acertás qué equipo gana (o empate)</span>
+        </div>
+        <div class="rule-row">
+            <span class="rule-pts">1</span>
+            <span class="rule-desc"><strong>Por cada goleador</strong><br>Acertás un jugador que convierte</span>
+        </div>
+    </div>
+</body>
+</html>

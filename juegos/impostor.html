@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impostor — Liga de los Pataduras</title>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080c18; --surface: rgba(255,255,255,0.05); --border: rgba(255,255,255,0.08);
+            --accent: #e63946; --accent-glow: rgba(230,57,70,0.25);
+            --accent2: #4cc9f0; --gold: #ffd60a; --muted: #a8b2c1; --text: #e8edf5;
+            --shadow: 0 8px 32px rgba(0,0,0,0.6);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            background-image: radial-gradient(ellipse at 30% 0%, rgba(76,201,240,0.1) 0%, transparent 55%),
+                              radial-gradient(ellipse at 70% 100%, rgba(230,57,70,0.07) 0%, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text);
+            min-height: 100svh;
+            display: flex; flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HEADER */
+        .site-header {
+            display: flex; align-items: center; justify-content: center;
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(8,12,24,0.75);
+            -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .back-btn {
+            position: absolute; left: 20px;
+            font-size: 18px; color: var(--muted); text-decoration: none;
+            width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border); border-radius: 8px; background: var(--surface);
+            transition: all 0.2s;
+        }
+        .back-btn:hover { color: var(--text); border-color: var(--accent2); }
+        .header-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px; letter-spacing: 2px; color: var(--text);
+        }
+        .header-title span { color: var(--accent2); }
+
+        /* MAIN */
+        .page { flex: 1; max-width: 520px; margin: 0 auto; padding: 36px 20px 60px; width: 100%; }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 26px; letter-spacing: 2px; color: var(--text);
+            margin-bottom: 18px; display: flex; align-items: center; gap: 10px;
+        }
+        .section-title::after {
+            content: ''; flex: 1; height: 2px;
+            background: linear-gradient(to right, var(--accent2), transparent);
+        }
+
+        /* SCREEN PANELS */
+        .screen { display: none; }
+        .screen.active { display: block; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* FORM ELEMENTS */
+        .field { margin-bottom: 16px; }
+        label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+                text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+        input[type="number"], input[type="text"] {
+            width: 100%; padding: 12px 14px;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; color: var(--text); font-family: 'Outfit', sans-serif;
+            font-size: 15px; font-weight: 600; outline: none; transition: border-color 0.2s;
+        }
+        input:focus { border-color: var(--accent2); }
+        input::placeholder { color: rgba(168,178,193,0.4); }
+
+        .names-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+        .name-input-row { display: flex; align-items: center; gap: 8px; }
+        .name-input-row .num {
+            font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+            color: var(--muted); min-width: 24px; text-align: right;
+        }
+        .name-input-row input { margin: 0; }
+
+        /* BUTTONS */
+        .btn {
+            width: 100%; padding: 14px;
+            border: none; border-radius: 10px;
+            font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700;
+            cursor: pointer; transition: all 0.2s; letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background: var(--accent); color: white;
+            box-shadow: 0 4px 16px var(--accent-glow);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px var(--accent-glow); }
+        .btn-secondary {
+            background: var(--surface); color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: var(--accent2); }
+        .btn + .btn { margin-top: 10px; }
+
+        /* REVEAL CARD */
+        .reveal-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .reveal-step {
+            font-size: 12px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+        }
+        .reveal-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px; letter-spacing: 2px; color: var(--text);
+            margin-bottom: 24px;
+        }
+        .word-reveal { display: none; }
+        .word-box {
+            padding: 24px 32px;
+            border-radius: 14px;
+            margin: 16px 0 24px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px; letter-spacing: 3px;
+        }
+        .word-box.word { background: rgba(76,201,240,0.1); border: 2px solid var(--accent2); color: var(--accent2); }
+        .word-box.impostor { background: rgba(230,57,70,0.1); border: 2px solid var(--accent); color: var(--accent); }
+        .reveal-hint { font-size: 13px; color: var(--muted); }
+
+        .progress-bar-wrap { background: var(--surface); border-radius: 4px; height: 4px; margin-bottom: 24px; border: 1px solid var(--border); }
+        .progress-bar { height: 100%; background: var(--accent2); border-radius: 4px; transition: width 0.4s ease; }
+
+        /* INFO BOX */
+        .info-box {
+            background: rgba(76,201,240,0.06); border: 1px solid rgba(76,201,240,0.2);
+            border-radius: 12px; padding: 14px 16px;
+            font-size: 13px; color: var(--muted); line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .info-box strong { color: var(--accent2); }
+
+        /* WORD LIST PREVIEW */
+        .word-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+        .chip {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 6px; padding: 4px 10px;
+            font-size: 12px; font-weight: 600; color: var(--muted);
+        }
+
+        /* IMPOSTOR LIST */
+        .impostor-list-item {
+            display: flex; align-items: center; gap: 10px;
+            background: rgba(230,57,70,0.08); border: 1px solid rgba(230,57,70,0.25);
+            border-radius: 10px; padding: 10px 16px; margin-bottom: 8px;
+        }
+        .impostor-list-item .imp-name { font-weight: 700; font-size: 15px; flex: 1; }
+        .impostor-list-item .imp-badge {
+            font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+            background: var(--accent); color: white; padding: 2px 8px; border-radius: 4px;
+        }
+
+        footer.site-footer {
+            text-align: center; padding: 16px;
+            font-size: 12px; color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <a class="back-btn" href="../index.html" aria-label="Volver">←</a>
+    <h1 class="header-title">🕵️ <span>Impostor</span></h1>
+</header>
+
+<main class="page">
+
+    <!-- SCREEN 1: SETUP -->
+    <div class="screen active" id="screen-setup">
+        <div class="section-title">Configurar partida</div>
+
+        <div class="info-box">
+            Todos ven la misma <strong>palabra secreta</strong> excepto los impostores,
+            que solo ven la palabra <strong>Impostor</strong>.
+            ¡Sin revelarla, cada uno tiene que convencer de que la conoce!
+        </div>
+
+        <div class="field">
+            <label>Cantidad de participantes</label>
+            <input type="number" id="inputCantidad" min="3" max="20" value="5" placeholder="Ej: 5">
+        </div>
+        <div class="field">
+            <label>Cantidad de impostores</label>
+            <input type="number" id="inputImpostores" min="1" max="5" value="1" placeholder="Ej: 1">
+        </div>
+
+        <button class="btn btn-primary" id="btnSetupNext">Ingresar nombres →</button>
+    </div>
+
+    <!-- SCREEN 2: NAMES -->
+    <div class="screen" id="screen-names">
+        <div class="section-title">Participantes</div>
+        <div class="names-grid" id="namesGrid"></div>
+        <button class="btn btn-primary" id="btnStartGame">Empezar juego →</button>
+        <button class="btn btn-secondary" id="btnBackSetup">← Atrás</button>
+    </div>
+
+    <!-- SCREEN 3: REVEAL -->
+    <div class="screen" id="screen-reveal">
+        <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar" style="width:0%"></div>
+        </div>
+
+        <div class="reveal-card">
+            <div class="reveal-step" id="revealStep">Participante 1 de 5</div>
+            <div class="reveal-name" id="revealName">—</div>
+
+            <div id="wordReveal" class="word-reveal">
+                <div class="word-box" id="wordBox"></div>
+                <p class="reveal-hint" id="revealHint"></p>
+            </div>
+
+            <button class="btn btn-primary" id="btnShowWord" style="max-width:240px;margin:0 auto;">
+                Ver mi palabra
+            </button>
+            <button class="btn btn-primary" id="btnNext" style="display:none;max-width:240px;margin:0 auto;">
+                Siguiente →
+            </button>
+        </div>
+    </div>
+
+    <!-- SCREEN 4: DONE -->
+    <div class="screen" id="screen-done">
+        <div class="section-title">¡A jugar!</div>
+        <div class="info-box" style="margin-bottom:24px">
+            Todos ya vieron su palabra. Ahora discutan, hagan preguntas y descubran quién es el <strong>Impostor</strong>.
+        </div>
+        <div class="word-chips" id="impostorCount"></div>
+
+        <button class="btn btn-secondary" id="btnRevealWord">🔑 Revelar palabra secreta</button>
+        <button class="btn btn-secondary" id="btnRevealImpostors">🕵️ Revelar impostores</button>
+
+        <div id="finalReveal" style="display:none;text-align:center;margin-top:16px;">
+            <div class="word-box word" id="finalWord" style="display:inline-block;padding:16px 32px;"></div>
+        </div>
+        <div id="finalImpostors" style="display:none;margin-top:16px;">
+            <div id="impostorsList"></div>
+        </div>
+
+        <div style="margin-top:28px;border-top:1px solid var(--border);padding-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Jugar de nuevo</p>
+            <button class="btn btn-primary" id="btnPlayAgainSame">↺ Mismos participantes</button>
+            <button class="btn btn-secondary" id="btnPlayAgainNew">+ Nueva partida desde cero</button>
+        </div>
+    </div>
+
+</main>
+
+<footer class="site-footer">© Liga de los Pataduras</footer>
+
+<script>
+    // ── WORD LIST ──
+    const WORDS = [
+        'Franco Favotti','Jeronimo Hidalgo','Agustin Lonero','Agustin Navarro','Alejo Osuna',
+        'Enzo Juarez','Fabrizio Cecchini','Lucas Garcia','Gerardo Vaello','Juanse Macchi',
+        'Franco Mangiameli','Manuel Panizo','Mateo Pugliese','Maxi Ventura','Facundo Morán',
+        'Nahuel Monti','Teo Formento','Tobias Winjak','Joni Monti','Nicolas Viale',
+        'Milton Cabrera', 'Vilche','Tomás Mango','Nahuel Lonero',
+        'Vilche','Tomás Mango','Nahuel Lonero'
+    ];
+
+    // ── STATE ──
+    let state = { total: 5, impostores: 1, names: [], order: [], word: '', current: 0 };
+
+    // ── UTILS ──
+    const $ = id => document.getElementById(id);
+    function showScreen(id) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        $(id).classList.add('active');
+    }
+    function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    // ── SCREEN 1 → 2 ──
+    $('btnSetupNext').addEventListener('click', () => {
+        const cant = parseInt($('inputCantidad').value);
+        const imp  = parseInt($('inputImpostores').value);
+        if (isNaN(cant) || cant < 3) { alert('Mínimo 3 participantes'); return; }
+        if (isNaN(imp)  || imp < 1 || imp >= cant) { alert('Impostores inválidos'); return; }
+        state.total = cant;
+        state.impostores = imp;
+
+        const grid = $('namesGrid');
+        grid.innerHTML = '';
+        for (let i = 0; i < cant; i++) {
+            grid.innerHTML += `
+                <div class="name-input-row">
+                    <span class="num">${i + 1}</span>
+                    <input type="text" class="name-input" placeholder="Nombre ${i + 1}" maxlength="20">
+                </div>`;
+        }
+        showScreen('screen-names');
+        grid.querySelector('input').focus();
+    });
+
+    $('btnBackSetup').addEventListener('click', () => showScreen('screen-setup'));
+
+    // ── SCREEN 2 → 3 ──
+    $('btnStartGame').addEventListener('click', () => {
+        const inputs = document.querySelectorAll('.name-input');
+        const names = [];
+        for (const inp of inputs) {
+            const v = inp.value.trim();
+            if (!v) { alert('Completá todos los nombres'); inp.focus(); return; }
+            names.push(v);
+        }
+
+        // Pick random word
+        state.word  = WORDS[Math.floor(Math.random() * WORDS.length)];
+        state.names = names;
+
+        // Assign roles: shuffle indices, first N are impostors
+        const indices = shuffle([...Array(state.total).keys()]);
+        const impostorSet = new Set(indices.slice(0, state.impostores));
+        state.roles = names.map((_, i) => impostorSet.has(i) ? 'impostor' : 'word');
+
+        // Randomize reveal order
+        state.order   = shuffle([...Array(state.total).keys()]);
+        state.current = 0;
+
+        showRevealStep();
+        showScreen('screen-reveal');
+    });
+
+    // ── REVEAL LOGIC ──
+    function showRevealStep() {
+        const idx  = state.order[state.current];
+        const name = state.names[idx];
+        const pct  = (state.current / state.total) * 100;
+
+        $('progressBar').style.width = pct + '%';
+        $('revealStep').textContent = `Participante ${state.current + 1} de ${state.total}`;
+        $('revealName').textContent = name;
+
+        // Hide word, show button
+        $('wordReveal').style.display = 'none';
+        $('btnShowWord').style.display = 'block';
+        $('btnNext').style.display     = 'none';
+    }
+
+    $('btnShowWord').addEventListener('click', () => {
+        const idx  = state.order[state.current];
+        const role = state.roles[idx];
+
+        const box  = $('wordBox');
+        const hint = $('revealHint');
+
+        if (role === 'impostor') {
+            box.className  = 'word-box impostor';
+            box.textContent = 'IMPOSTOR';
+            hint.textContent = '¡Sos el impostor! Intentá pasar desapercibido.';
+        } else {
+            box.className  = 'word-box word';
+            box.textContent = state.word.toUpperCase();
+            hint.textContent = 'Esa es la palabra secreta. ¡No la digas directamente!';
+        }
+
+        $('wordReveal').style.display  = 'block';
+        $('btnShowWord').style.display = 'none';
+        $('btnNext').style.display     = 'block';
+
+        const isLast = state.current === state.total - 1;
+        $('btnNext').textContent = isLast ? '¡Listo! A jugar 🎮' : 'Siguiente →';
+    });
+
+    $('btnNext').addEventListener('click', () => {
+        state.current++;
+        if (state.current >= state.total) {
+            showDoneScreen();
+        } else {
+            showRevealStep();
+        }
+    });
+
+    // ── DONE SCREEN ──
+    function startGameWithCurrentState() {
+        // New word, new roles, new reveal order — same names/total/impostores
+        state.word  = WORDS[Math.floor(Math.random() * WORDS.length)];
+        const indices = shuffle([...Array(state.total).keys()]);
+        const impostorSet = new Set(indices.slice(0, state.impostores));
+        state.roles   = state.names.map((_, i) => impostorSet.has(i) ? 'impostor' : 'word');
+        state.order   = shuffle([...Array(state.total).keys()]);
+        state.current = 0;
+        showRevealStep();
+        showScreen('screen-reveal');
+    }
+
+    function showDoneScreen() {
+        const imp = state.roles.filter(r => r === 'impostor').length;
+        $('impostorCount').innerHTML =
+            `<span class="chip">👥 ${state.total} participantes</span>
+             <span class="chip">🕵️ ${imp} impostor${imp > 1 ? 'es' : ''}</span>
+             <span class="chip">🔑 Palabra oculta</span>`;
+        $('finalReveal').style.display   = 'none';
+        $('finalImpostors').style.display = 'none';
+        $('btnRevealWord').style.display      = 'block';
+        $('btnRevealImpostors').style.display = 'block';
+        showScreen('screen-done');
+    }
+
+    $('btnRevealWord').addEventListener('click', () => {
+        $('finalWord').textContent = state.word.toUpperCase();
+        $('finalReveal').style.display = 'block';
+        $('btnRevealWord').style.display = 'none';
+    });
+
+    $('btnRevealImpostors').addEventListener('click', () => {
+        const list = $('impostorsList');
+        list.innerHTML = state.names
+            .map((name, i) => state.roles[i] === 'impostor'
+                ? `<div class="impostor-list-item">
+                       <span>🕵️</span>
+                       <span class="imp-name">${name}</span>
+                       <span class="imp-badge">Impostor</span>
+                   </div>`
+                : '')
+            .join('');
+        $('finalImpostors').style.display = 'block';
+        $('btnRevealImpostors').style.display = 'none';
+    });
+
+    $('btnPlayAgainSame').addEventListener('click', () => {
+        startGameWithCurrentState();
+    });
+
+    $('btnPlayAgainNew').addEventListener('click', () => {
+        showScreen('screen-setup');
+    });
+</script>
+</body>
+</html>

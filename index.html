@@ -3,39 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Liga de los Pataduras</title>
     <link rel="shortcut icon" href="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index/estiloindex.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header id="Titulo">
-        <h1>Liga de los Pataduras</h1>
-        <div class="logo">
-            <img src="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" alt="Logo Liga de los Pataduras">
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hex-grid" aria-hidden="true"></div>
         </div>
-    </header>
 
-    <!-- Menú de navegación -->
-    <nav id="menu">
-        <ul>
-            <li><a href="introduccion/introduccion.html">Reglamento</a></li>
-            <li><a href="Ediciones/EdicionesAmateurismo.html">Amateurismo</a></li>
-            <li><a href="Ediciones/EdicionesProfesionalismo.html">Profesionalismo</a></li>
-            <li><a href="estadisticasHistoricas/estadisticasHistoricas.html">Estadisticas Historicas</a></li>
-            <li><a href="equipos/equipos.html">Equipos</a></li>
-        </ul>
-    </nav>
+        <div class="hero-inner">
+            <img class="hero-logo" src="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" alt="Liga de los Pataduras">
+            <h1 class="hero-title">Liga de los<br><span>Pataduras</span></h1>
+            <p class="hero-sub">La competencia más competitiva del barrio.</p>
+        </div>
+    </section>
 
-    <!-- Sección Principal -->
-    <main>
-        <!-- Aquí puedes añadir contenido adicional -->
+    <!-- ── NAV GRID ── -->
+    <main class="nav-section">
+        <div class="nav-grid">
+
+            <a class="nav-card" href="introduccion/introduccion.html">
+                <span class="nav-card-icon">📋</span>
+                <span class="nav-card-title">Reglamento</span>
+                <span class="nav-card-desc">Reglas y formato de competencia</span>
+                <span class="nav-card-arrow">→</span>
+            </a>
+
+            <a class="nav-card" href="Ediciones/Ediciones.html">
+                <span class="nav-card-icon">🏆</span>
+                <span class="nav-card-title">Ediciones</span>
+                <span class="nav-card-desc">Historial de torneos y campeones</span>
+                <span class="nav-card-arrow">→</span>
+            </a>
+
+            <a class="nav-card" href="estadisticasHistoricas/estadisticasHistoricas.html">
+                <span class="nav-card-icon">📊</span>
+                <span class="nav-card-title">Estadísticas Históricas</span>
+                <span class="nav-card-desc">Goleadores y MVPs de todas las ediciones</span>
+                <span class="nav-card-arrow">→</span>
+            </a>
+
+            <a class="nav-card" href="equipos/equipos.html">
+                <span class="nav-card-icon">👕</span>
+                <span class="nav-card-title">Equipos</span>
+                <span class="nav-card-desc">Planteles Historicos y actuales</span>
+                <span class="nav-card-arrow">→</span>
+            </a>
+
+            <!-- JUEGOS — card expandible -->
+            <div class="nav-card nav-card--games" id="gamesCard">
+                <div class="nav-card-main" id="gamesToggle">
+                    <span class="nav-card-icon">🎮</span>
+                    <span class="nav-card-title">Juegos</span>
+                    <span class="nav-card-arrow expand-arrow">↓</span>
+                </div>
+                <div class="games-submenu" id="gamesSubmenu">
+                    <a class="submenu-link" href="juegos/prode.html">
+                        <span class="submenu-icon">🎯</span>
+                        <div class="submenu-text">
+                            <strong>Prode</strong>
+                            <small>Predecí el resultado y los goleadores</small>
+                        </div>
+                        <span class="submenu-coming">Próximamente</span>
+                    </a>
+                    <a class="submenu-link" href="juegos/impostor.html">
+                        <span class="submenu-icon">🕵️</span>
+                        <div class="submenu-text">
+                            <strong>Impostor</strong>
+                            <small>¿Quién tiene la palabra secreta?</small>
+                        </div>
+                        <span class="submenu-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </main>
 
-    <!-- Pie de página -->
-    <footer id="Footer" class="footer">
-        <p>&copy; Liga de los Pataduras. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <p>© Liga de los Pataduras — Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Expandir/colapsar submenú de Juegos
+        const toggle = document.getElementById('gamesToggle');
+        const card   = document.getElementById('gamesCard');
+        const menu   = document.getElementById('gamesSubmenu');
+        const arrow  = toggle.querySelector('.expand-arrow');
+
+        toggle.addEventListener('click', () => {
+            const open = card.classList.toggle('open');
+            arrow.textContent = open ? '↑' : '↓';
+        });
+    </script>
+
 </body>
 </html>
