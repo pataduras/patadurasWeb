@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Liga de los Pataduras — 2da Edición</title>
-
+    <title>Liga de los Pataduras — 3ra Edición</title>
     <link rel="icon" href="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" />
     <link rel="stylesheet" href="estilo3eraEdicion.css" />
+
 </head>
 
 <body>
@@ -16,36 +16,29 @@
         <img class="brand-logo"
             src="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small"
             alt="Liga de los Pataduras" />
-        <h1>La Liga de los Pataduras</h1>
+        <div class="brand-text">
+            <span class="brand-subtitle">Fútbol Amateur</span>
+            <span class="brand-title">Liga de los Pataduras</span>
+            <span class="edition-badge">3RA EDICIÓN</span>
+        </div>
     </div>
-
     <button id="themeToggle" aria-label="Cambiar tema" class="theme-btn">
         <span class="icon"></span>
     </button>
 </header>
 
-<!-- ========================================================= -->
-<!-- =======================  TABS  =========================== -->
-<!-- ========================================================= -->
-
 <nav class="tabs">
-    <button class="tab-btn active" data-tab="fixture">Fixture</button>
-    <button class="tab-btn" data-tab="goleadores">Goleadores</button>
-    <button class="tab-btn" data-tab="mvps">MVPs</button>
-    <button class="tab-btn" data-tab="equipos">Equipos</button>
+    <button class="tab-btn active" data-tab="fixture">⚽ Fixture</button>
+    <button class="tab-btn" data-tab="goleadores">🥅 Goleadores</button>
+    <button class="tab-btn" data-tab="mvps">⭐ MVPs</button>
+    <button class="tab-btn" data-tab="equipos">👕 Equipos</button>
 </nav>
 
-<!-- PANEL DINÁMICO -->
-<main id="tabContent" class="tab-content card">
-    Proximamente...
-</main>
+<main id="tabContent" class="tab-content"></main>
 
-<!--<footer class="site-footer">
-    © Liga de los Pataduras — Edición 2026
-</footer>-->
 
-<script src="js2daEdicion/data.js"></script>
-<script src="js2daEdicion/main.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>

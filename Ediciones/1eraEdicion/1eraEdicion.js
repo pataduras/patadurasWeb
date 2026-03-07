@@ -29,7 +29,7 @@ function mostrarFixture(){
             <div class = 'caja '>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>7</td>
                         <td>14</td>
@@ -59,7 +59,7 @@ function mostrarFixture(){
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>6</td>
                         <td>7</td>
@@ -89,7 +89,7 @@ function mostrarFixture(){
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>7</td>
                         <td>6</td>
@@ -118,7 +118,7 @@ function mostrarFixture(){
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>6</td>
                         <td>10</td>
@@ -148,7 +148,7 @@ function mostrarFixture(){
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>7</td>
                         <td>4</td>
@@ -177,7 +177,7 @@ function mostrarFixture(){
             <div class = 'caja'>
                 <table border="2">
                     <tr>
-                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+                        <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
                         <td>El Cuarto Reich</td>
                         <td>9</td>
                         <td>11</td>
@@ -225,13 +225,13 @@ function mostrarGoleadores(){
     
             </tr>
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Maxi Ventura</td>
                 <td>12</td>
     
             </tr>
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Diego Arroyo</td>
                 <td>12</td>
     
@@ -248,7 +248,7 @@ function mostrarGoleadores(){
                 <td>9</td>
             </tr>
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Lucas Garcia</td>
                 <td>7</td>
     
@@ -260,21 +260,21 @@ function mostrarGoleadores(){
     
             </tr>   
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Enzo Juarez</td>
                 <td>6</td>
     
             </tr>   
 
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Franco Favotti</td>
                 <td>4</td>
     
             </tr>
             
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Jeronimo Hidalgo</td>
                 <td>3</td>
     
@@ -286,7 +286,7 @@ function mostrarGoleadores(){
     
             </tr>
             <tr>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Facundo Moran</td>
                 <td>1</td>
     
@@ -335,7 +335,7 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>3</td>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Manuel Panizo</td>
     
             </tr>
@@ -347,7 +347,7 @@ function mostrarMpvs(){
             </tr>
             <tr>
                 <td>5</td>
-                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"></td>
+                <td><img width="25px" height="25px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"></td>
                 <td>Enzo Juarez</td>
     
             </tr>
@@ -385,7 +385,7 @@ function mostrarTituloEquipos(){
 function mostrarEquipo1(){
     var nombre1 = document.getElementById("nombre1");
     nombre1.innerHTML += `           
-        <h3><table border="0"><tr><td>El Cuarto Reich</td><td><img width="30px" height="30px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td></tr></table><h3>
+        <h3><table border="0"><tr><td>El Cuarto Reich</td><td><img width="30px" height="30px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td></tr></table><h3>
     `;
 
     var formacion1 = document.getElementById("formacion1");
@@ -441,7 +441,7 @@ function mostrarTransferencias(){
         </tr></table><h2>
 
         <h3><table border="0"><tr>
-            <td><img width="20px" height="20px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+            <td><img width="20px" height="20px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
             <td>Agustin Lonero</td>
             <td><img width="45px" height="25px" alt="Logo de Transferencias" src="https://pbs.twimg.com/media/GTncwkHXIAABJwC?format=png&name=small"/></td>
             <td>Maxi Ventura</td>
@@ -449,7 +449,7 @@ function mostrarTransferencias(){
         </tr></table><h3>
 
         <h3><table border="0"><tr>
-            <td><img width="20px" height="20px" alt="Logo de El Cuarto Reich" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Coat_of_arms_of_Germany.svg/220px-Coat_of_arms_of_Germany.svg.png"/></td>
+            <td><img width="20px" height="20px" alt="Logo de El Cuarto Reich" src="logoCuartoReich.png"/></td>
             <td>Nahuel Lonero</td>
             <td><img width="45px" height="25px" alt="Logo de Transferencias" src="https://pbs.twimg.com/media/GTncwkHXIAABJwC?format=png&name=small"/></td>
             <td>Gerardo Vaello</td>

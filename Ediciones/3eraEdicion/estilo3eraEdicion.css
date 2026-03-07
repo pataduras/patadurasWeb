@@ -1,556 +1,452 @@
-:root{
-    --bg: #0b1020;
-    --card: rgba(255,255,255,0.04);
-    --accent: #7b1fa2;
-    --accent-2: #39d353;
-    --muted: #cdd6e0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;900&display=swap');
 
-    --tab-bg: rgba(255,255,255,0.06);
-    --tab-bg-active: var(--accent);
+
+
+/* ============================================================ */
+/* ESTILOS 3RA EDICIÓN                                          */
+/* ============================================================ */
+
+:root {
+    --bg: #080c18;
+    --surface: rgba(255,255,255,0.04);
+    --surface-hover: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.07);
+    --accent: #e63946;
+    --accent-glow: rgba(230,57,70,0.25);
+    --accent2: #4cc9f0;
+    --gold: #ffd60a;
+    --muted: #a8b2c1;
+    --text: #e8edf5;
+    --tab-active: var(--accent);
+    --shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
 
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
+body.light {
+    --bg: #f0f2f7;
+    --surface: rgba(255,255,255,0.85);
+    --surface-hover: rgba(255,255,255,1);
+    --border: rgba(0,0,0,0.1);
+    --accent: #c1121f;
+    --accent-glow: rgba(193,18,31,0.12);
+    --accent2: #0096c7;
+    --gold: #e09f3e;
+    --muted: #556070;
+    --text: #1a1f2e;
+    --shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 
 body {
-    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-    background: radial-gradient(circle at top, #1a1a3a 0%, #0b1020 70%);
-    color: var(--muted);
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    background-image: radial-gradient(ellipse at 20% 0%, rgba(230,57,70,0.08) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 100%, rgba(76,201,240,0.06) 0%, transparent 60%);
     background-attachment: fixed;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
 }
 
-/* ===== MODO CLARO (fondo liso) ===== */
-body.light {
-    --bg: #ffffff;
-    --card: rgba(0,0,0,0.07);
-    --accent: #5a2ca0;
-    --accent-2: #1e8f3b;
-    --muted: #1a1a1a;
-
-    --tab-bg: rgba(0,0,0,0.05);
-    --tab-bg-active: var(--accent);
-
-    background: #ffffff; /* Fondo liso */
-    color: var(--muted);
-}
-
-/* ========================= */
-/* HEADER                    */
-/* ========================= */
-
+/* ── HEADER ── */
 .site-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
-    border-bottom: 1px solid rgba(255,255,255,.04);
-    position: relative;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari fix */
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,12,24,0.7);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+body.light .site-header { background: rgba(240,242,247,0.85); }
 
-.site-header .main-nav {
-    position: absolute;
-    right: 20px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.brand { display: flex; align-items: center; gap: 14px; }
 .brand-logo {
-    width: 90px;     /* antes 56px — ahora bastante más grande */
-    height: 90px;
+    width: 72px; height: 72px;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 12px var(--accent-glow));
+}
+.brand-text { display: flex; flex-direction: column; }
+.brand-subtitle { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+.brand-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: 2px;
+}
+.edition-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 2px;
+    width: fit-content;
 }
 
-.logo-sm {
-    width: 30px;
-    height: 30px;
-}
-
-.team-logo {
-    width: 90px;
-    display: block;
-    margin: 0 auto 10px auto; /* 💥 centrado perfecto */
-}
-
-.brand h1 {
-    font-size: 40px;    /* antes 20px */
-    font-weight: 900;
-    color: var(--accent);
-    margin: 0;
-}
-
+/* ── THEME TOGGLE ── */
 .theme-btn {
     position: fixed;
-    top: 14px;
-    right: 14px;
-    width: 42px;
-    height: 42px;
-
-    border: none;
+    top: 18px; right: 18px;
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
     border-radius: 50%;
-    background: var(--card-bg);
+    background: var(--surface);
     cursor: pointer;
-    transition: 0.3s ease;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 2px 8px var(--shadow);
+    color: var(--muted);
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    z-index: 200;
 }
+.theme-btn:hover { background: var(--surface-hover); transform: scale(1.1); }
 
-.theme-btn:hover {
-    transform: scale(1.08);
-}
-
-.theme-btn .icon {
-    width: 26px;
-    height: 26px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.3s ease;
-}
-
-/* Íconos */
-body:not(.dark) .theme-btn .icon {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/869/869869.png"); /* sol */
-}
-
-body.dark .theme-btn .icon {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/526/526202.png"); /* luna */
-}
-
-
-/* ========================= */
-/* TABS                      */
-/* ========================= */
-
+/* ── TABS ── */
 .tabs {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    padding: 16px;
-    background: rgba(255,255,255,0.03);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari fix */
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    gap: 6px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
 }
+.tabs::-webkit-scrollbar { display: none; }
 
 .tab-btn {
-    background: var(--tab-bg);
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-weight: 600;
+    flex: 0 0 auto;
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     cursor: pointer;
     color: var(--muted);
-    transition: 0.2s;
+    transition: all 0.2s;
 }
-
-.tab-btn:hover {
-    background: rgba(255,255,255,0.15);
-}
-
+.tab-btn:hover { background: var(--surface-hover); color: var(--text); border-color: var(--accent2); }
 .tab-btn.active {
-    background: var(--tab-bg-active);
+    background: var(--accent);
+    border-color: var(--accent);
     color: white;
+    box-shadow: 0 0 16px var(--accent-glow);
 }
 
-/* ========================= */
-/* PANEL DE CONTENIDO        */
-/* ========================= */
-
+/* ── MAIN CONTENT ── */
 .tab-content {
-    max-width: 1000px;
-    margin: 20px auto 50px auto;
-    padding: 24px;
+    max-width: 880px;
+    margin: 28px auto 60px;
+    padding: 0 20px;
 }
 
-/* ========================= */
-/* CARD                      */
-/* ========================= */
-
-.card {
-    background: linear-gradient(180deg,
-        rgba(255,255,255,0.04),
-        rgba(255,255,255,0.02)
-    );
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+/* ── SECTION TITLE ── */
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent), transparent);
 }
 
-body.light .card {
-    background: #f5f5f5;
-    border-color: rgba(0,0,0,0.1);
-}
-
-.card h2 {
+/* ── FIXTURE ── */
+.fixture-date-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: var(--accent);
-    margin: 0 0 16px 0;
-    letter-spacing: .5px;
+    margin: 20px 0 8px;
+}
+.fixture-date-label .badge {
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.fixture-date-label .serie-tag {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
 }
 
-/* ========================= */
-/* TABLES (MVPs)             */
-/* ========================= */
+.match-card {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+}
+.match-card:hover { background: var(--surface-hover); border-color: var(--accent); transform: translateY(-1px); box-shadow: var(--shadow); }
 
+.match-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.match-team.right { flex-direction: row-reverse; }
+.match-team img { width: 36px; height: 36px; object-fit: contain; }
+.match-team span { font-weight: 600; font-size: 14px; }
+
+.match-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 100px;
+}
+.match-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: var(--accent2);
+    line-height: 1;
+}
+.match-link {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.match-link:hover { background: var(--accent); color: white; border-color: var(--accent); }
+.match-link.disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* GRAN FINAL */
+.gran-final-card {
+    background: linear-gradient(135deg, rgba(255,214,10,0.08), rgba(230,57,70,0.08));
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 8px;
+    text-align: center;
+    box-shadow: 0 0 32px rgba(255,214,10,0.15);
+}
+.gran-final-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+.gran-final-score-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.gran-final-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.gran-final-team img { width: 52px; height: 52px; object-fit: contain; }
+.gran-final-team span { font-weight: 700; font-size: 13px; max-width: 120px; text-align: center; }
+.gran-final-scorebox {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.campeon-banner {
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--gold), #e09f3e);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 4px 24px rgba(255,214,10,0.3);
+}
+.campeon-banner img { width: 48px; height: 48px; object-fit: contain; }
+.campeon-banner span { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: #1a1200; }
+
+/* ── STATS TABLE ── */
 .stats-table {
     width: 100%;
     border-collapse: collapse;
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
 }
-
-.stats-table .team-logo-sm {
-    width: 40px;   /* antes 30px */
-    height: 40px;  /* antes 30px */
-}
-
 .stats-table th {
-    text-align: center;
-}
-.stats-table td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    text-align: center;
-}
-
-body.light .stats-table td,
-body.light .stats-table th {
-    border-color: rgba(0,0,0,0.08);
-}
-
-.stats-table th {
-    color: var(--accent);
+    padding: 12px 16px;
+    font-size: 11px;
     font-weight: 700;
-}
-
-/* ========================= */
-/* FIXTURE MATCHES           */
-/* ========================= */
-
-.fixture-date-title {
-    font-weight: 700;
-    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     color: var(--accent);
-    max-width: 600px;   /* el mismo ancho que usan los partidos */
-    margin: 0 auto;     /* centrar ese ancho */
-    text-align: left;   /* alinear texto a la izquierda */
-    padding-left: 130px;  /* pequeño ajuste para que coincida PERFECTO */
-}
-
-.fixture-subtitle {
-    font-size: 14px;
-    color: var(--muted);
-    margin-top: 2px;
+    background: rgba(230,57,70,0.07);
     text-align: left;
-    padding-left: 0px;
 }
-
-
-
-
-.match {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: 0.2s;
+.stats-table th.center, .stats-table td.center { text-align: center; }
+.stats-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
 }
+.stats-table tr:last-child td { border-bottom: none; }
+.stats-table tr:hover td { background: var(--surface-hover); }
 
-body.light .match {
-    background: rgba(0,0,0,0.05);
-}
-
-.match:hover {
-    background: rgba(255,255,255,0.09);
-    transform: translateY(-2px);
-}
-
-.match .teams {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.match .score {
-    font-weight: 700;
+.rank-num {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
-    color: var(--accent-2);
-    min-width: 60px;
+    color: var(--muted);
+    width: 32px;
+    text-align: center;
+}
+.rank-num.top1 { color: var(--gold); }
+.rank-num.top2 { color: #c0c0c0; }
+.rank-num.top3 { color: #cd7f32; }
+
+.goals-pill {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 3px 12px;
+    border-radius: 20px;
+    min-width: 40px;
     text-align: center;
 }
 
-.match a {
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--muted);
+.team-logo-sm { width: 32px; height: 32px; object-fit: contain; }
+.player-name { font-weight: 600; }
+.mvp-badge {
+    display: inline-block;
+    background: rgba(255,214,10,0.15);
+    color: var(--gold);
+    border: 1px solid rgba(255,214,10,0.3);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
-/* Contenedor general del partido */
-.match-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+/* ── EQUIPOS ── */
+.teams-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width: 640px) { .teams-grid { grid-template-columns: 1fr; } }
 
-/* === BLOQUE A === */
-.match-left {
+.team-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s;
+}
+.team-card:hover { border-color: var(--accent); box-shadow: 0 0 24px var(--accent-glow); }
+
+.team-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
 }
+.team-header img { width: 64px; height: 64px; object-fit: contain; }
+.team-header h3 { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; text-align: center; }
 
-/* Fecha + Serie centrados */
-.fecha-serie {
-    text-align: center;
-    font-weight: bold;
+.uniform-chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 4px;
 }
+.uniform-chip.clara { background: rgba(255,255,255,0.15); color: var(--text); }
+.uniform-chip.oscura { background: rgba(0,0,0,0.4); color: var(--muted); border: 1px solid var(--border); }
 
-.fecha-title {
-    font-size: 1.1rem;
-}
-
-.serie-title {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Equipos + Resultado (como antes) */
-.teams-block {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-/* Resultado */
-.score {
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-/* === BLOQUE B === */
-.match-right {
+.player-list { list-style: none; }
+.player-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
     display: flex;
     align-items: center;
+    gap: 6px;
 }
-
-
-
-/* ========================= */
-/* EQUIPOS                   */
-/* ========================= */
-
-.team-block {
-    margin-bottom: 24px;
-    padding: 16px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.04);
-    border: 2px solid var(--accent); /* 💥 borde completo, no solo izquierda */
-    text-align: center;
-}
-
-
-.team-players {
-    margin-top: 8px;
-    padding-left: 0; /* Eliminamos sangría */
-    list-style: none; /* Se ve más limpio */
-}
-
-.team-players li {
-    margin-bottom: 4px;
-}
-
-.uniform-info {
-    margin-top: 12px;
-    font-size: 16px;
-    color: var(--muted);
-    text-align: center;
-}
-
-
-.transfers {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.transfers p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-/* ========================= */
-/* FOOTER                    */
-/* ========================= */
-
-.site-footer {
-    text-align: center;
-    padding: 20px;
-    color: var(--muted);
-    opacity: 0.7;
-}
-
-.info-btn {
-    text-decoration: none;
-    padding: 8px 12px;
+.player-list li:last-child { border-bottom: none; }
+.captain-badge {
+    font-size: 10px;
+    font-weight: 700;
     background: var(--accent);
     color: white;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: 0.2s;
-    text-align: center;
+    padding: 1px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
 }
 
-.info-btn:hover {
-    opacity: 0.85;
+/* TRANSFERS */
+.transfers-section { margin-top: 28px; }
+.transfer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
 }
+.transfer-item img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+.transfer-arrow { color: var(--accent); font-size: 18px; font-weight: 700; flex-shrink: 0; }
+.transfer-name { font-weight: 700; font-size: 14px; flex: 1; }
+.transfer-clubs { font-size: 12px; color: var(--muted); }
 
-
-/* ========================================================= */
-/*          RESPONSIVE REAL (mobile-first improvements)       */
-/* ========================================================= */
-
-/* ---------- Móviles grandes (≤ 850px) ---------- */
-@media(max-width: 850px){
-
-    .tab-content {
-        padding: 16px;
-        margin: 10px;
-    }
-
-    .card h2 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    .brand h1 { font-size: 28px; }
-    .brand-logo { width: 70px; height: 70px; }
-
-    .fixture-date-title {
-        padding-left: 0;
-        text-align: center;
-        max-width: 100%;
-    }
-}
-
-/* ---------- Tablets y móviles medianos (≤ 700px) ---------- */
-@media(max-width: 700px){
-
-    /* Header en dos filas */
-    .site-header {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .site-header .main-nav {
-        position: static;
-    }
-
-    /* Tabs scrollables */
-    .tabs {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        scrollbar-width: none;
-    }
-    .tabs::-webkit-scrollbar { display: none; }
-
-    .tab-btn {
-        flex: 0 0 auto;
-        padding: 10px 14px;
-    }
-
-    /* Partidos más compactos */
-    .match {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 10px;
-        text-align: center;
-    }
-
-    .match .teams {
-        justify-content: center;
-    }
-
-    .match a {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* ---------- Móviles chicos (≤ 600px) ---------- */
-@media(max-width: 600px){
-
-    /* Fixture: BLOQUE A arriba — BLOQUE B abajo */
-    .match-row {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .match-left {
-        width: 100%;
-        align-items: center;
-    }
-
-    .match-right {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .score {
-        font-size: 1.4rem;
-        min-width: auto;
-    }
-
-    .logo-sm { width: 26px; height: 26px; }
-}
-
-/* ---------- Móviles muy chicos (≤ 480px) ---------- */
-@media(max-width: 480px){
-
-    .brand h1 { font-size: 18px; }
-    .brand-logo { width: 50px; height: 50px; }
-
-    .tabs {
-        padding: 10px;
-        gap: 4px;
-    }
-
-    /* Tablas scroll horizontal */
-    .stats-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .team-block {
-        padding: 12px;
-    }
-
-    .team-logo { width: 70px; }
-
-    .fixture-date-title {
-        font-size: 16px;
-    }
-}
-
-/* ---------- Ultra-mini (≤ 360px) ---------- */
-@media(max-width: 360px){
-    body { font-size: 14px; }
-    .tab-btn { padding: 8px 10px; }
-    .brand-logo { width: 42px; height: 42px; }
+/* ── RESPONSIVE ── */
+@media(max-width: 600px) {
+    .match-card { grid-template-columns: 1fr; gap: 8px; }
+    .match-team.right { flex-direction: row; }
+    .match-center { flex-direction: row; justify-content: center; gap: 12px; }
+    .brand-title { font-size: 26px; }
 }

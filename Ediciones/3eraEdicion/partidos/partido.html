@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Liga de los Pataduras</title>
+<link rel="stylesheet" href="estiloPartidos.css" />
+</head>
+
+<body>
+<header id="Titulo">
+    <h1>Ficha del Partido</h1>
+</header>
+
+<div class="grid-layout">
+
+    <div id="LugarYHora" class="caja SedeyHorario"></div>
+
+    <div class="equipos-header dos-columnas">
+
+        <!-- EQUIPO 1 -->
+        <div class="equipo-col">
+            <div id="Equipo1" class="equipo-header"></div>
+            <div class="tabla-dupla">
+                <div id="TablaEquipo1" class="tabla lado"></div>
+            </div>
+        </div>
+
+        <!-- EQUIPO 2 -->
+        <div class="equipo-col">
+            <div id="Equipo2" class="equipo-header"></div>
+            <div class="tabla-dupla">
+                <div id="TablaEquipo2" class="tabla lado"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="partidos.js"></script>
+<script src="mainPartido.js"></script>
+
+</body>
+</html>
