@@ -41,24 +41,36 @@ const PARTIDOS_DB = {
 
     2: {
         lugarYHora: {
-            fecha: "-",
-            estadio: "-"
+            fecha: "Domingo 29/03, 19:00",
+            estadio: "Polideportivo Patricios"
         },
         equipos: [
             {
                 nombre: "La Naranja Lechera",
                 logo: "logos/logoNaranjaLechera.png",
-                goles: '-',
+                goles: '2',
                 jugadores: [
-                    
+                    { nombre: "Nahuel Monti (C)", goles: 0 },
+                    { nombre: "Jeronimo Hidalgo", goles: 1 },
+                    { nombre: "Franco Favotti", goles: 0 },
+                    { nombre: "Joni", goles: 1 },
+                    { nombre: "Nicolás Viale", goles: 0 },
+                    { nombre: "Facundo Morán* (Temporal)", goles: 0 },
                 ]
             },
             {
                 nombre: "Los Guerreros Z",
                 logo: "logos/logoGuerrerosZ.png",
-                goles: '-',
+                goles: '6',
                 jugadores: [
-                    
+                    { nombre: "Tomás Mango(C)", goles:  3},
+                    { nombre: "Agustin Navarro", goles: 1 },
+                    { nombre: "Fabrizio Cecchini", goles: 0 },
+                    { nombre: "Juanse Macchi", goles: 0 },
+                    { nombre: "Maxi Ventura", goles: 1 },
+                    { nombre: "Tobías Winjak", goles: 0 },
+                    { nombre: "Alejo Osuna", goles: 1 },
+                    { nombre: "Teo Formento", goles: 0 },
                 ]
             }
         ]
@@ -66,24 +78,37 @@ const PARTIDOS_DB = {
 
     3: {
         lugarYHora: {
-            fecha: "-",
-            estadio: "-"
+            fecha: "Domingo 12/03, 19:00",
+            estadio: "Que Golazo, Parque Patricios, La Boca"
         },
         equipos: [
             {
                 nombre: "La Naranja Lechera",
                 logo: "logos/logoNaranjaLechera.png",
-                goles: '-',
+                goles: '3',
                 jugadores: [
-                
+                    { nombre: "Nahuel Monti (C)", goles: 0 },
+                    { nombre: "Jeronimo Hidalgo", goles: 0 },
+                    { nombre: "Franco Favotti", goles: 0 },
+                    { nombre: "Joni", goles: 0 },
+                    { nombre: "Nicolás Viale", goles: 2 },
+                    { nombre: "Manuel Panizo", goles: 0 },
+                    { nombre: "Agustín Lonero", goles: 1 },
                 ]
             },
             {
                 nombre: "Los Guerreros Z",
                 logo: "logos/logoGuerrerosZ.png",
-                goles: '-',
+                goles: '6',
                 jugadores: [
-                    
+                    { nombre: "Gerardo Vaello (C)", goles:  0},
+                    { nombre: "Tomás Mango", goles:  2},
+                    { nombre: "Agustin Navarro", goles: 0},
+                    { nombre: "Fabrizio Cecchini", goles: 0 },
+                    { nombre: "Juanse Macchi", goles: 1 },
+                    { nombre: "Maxi Ventura", goles: 1 },
+                    { nombre: "Enzo Juarez", goles: 2 },
+                    { nombre: "Alejo Osuna", goles: 0 },
                 ]
             }
         ]

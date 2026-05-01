@@ -22,7 +22,7 @@ function renderFixture() {
         ${regularMatches.map(f => `
             <div class="fixture-date-label">
                 <span class="badge">Fecha ${f.fecha}</span>
-                <span class="serie-tag">Serie (1–0)</span>
+                <span class="serie-tag">Serie (1–2)</span>
             </div>
             <div class="match-card">
                 <div class="match-team">

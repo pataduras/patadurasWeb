@@ -9,8 +9,8 @@ const TEAMS = [
         indumentaria: 'Clara',
         players: [
             'Nahuel Monti (C)', 'Jeronimo Hidalgo', 'Franco Favotti', 'Manuel Panizo', 'Diego Arroyo',
-            'Franco Mangiameli', 'Joni Monti', 'Vilche', 'Mateo Pugliese', 'Nicolás', 'Nahuel Lonero', 
-            'Milton Cabrera', 'Lucas Garcia'
+            'Franco Mangiameli', 'Joni Monti', 'Vilche', 'Mateo Pugliese', 'Nicolás Viale', 'Nahuel Lonero', 
+            'Agustin Lonero', 'Lucas Garcia'
         ]
     },
     {
@@ -20,7 +20,7 @@ const TEAMS = [
         indumentaria: 'Oscura',
         players: [
             'Gerardo Vaello (C)', 'Agustin Navarro', 'Tobias Winjak', 'Tomas Mango', 'Juanse Macchi', 'Fabrizio Cecchini',
-            'Enzo Juarez', 'Alejo Osuna', 'Agustin Lonero', 'Maxi Ventura', 'Facundo Morán', 'Teo Formento', ''
+            'Enzo Juarez', 'Alejo Osuna', 'Maxi Ventura', 'Facundo Morán', 'Teo Formento',  'Milton Cabrera'
         ]
     }
 ];
@@ -32,8 +32,8 @@ function T(id) { return TEAMS.find(t => t.id === id); }
 // ================================
 const FIXTURE = [
     { fecha:1,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:5,  goles_visitante:3,  link:'partidos/partido.html?partido=1' },
-    { fecha:2,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:'-', goles_visitante:'-',  /*link:'partidos/partido.html?partido=2'*/ },
-    { fecha:3,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:'-',  goles_visitante:'-', /*link:'partidos/partido.html?partido=3'*/ },
+    { fecha:2,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:2, goles_visitante:6,  link:'partidos/partido.html?partido=2' },
+    { fecha:3,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:3,  goles_visitante:6, link:'partidos/partido.html?partido=3' },
     { fecha:4,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:'-',  goles_visitante:'-',  /*link:'partidos/partido.html?partido=4'*/ },
     { fecha:5,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:'-',  goles_visitante:'-',  /*link:'partidos/partido.html?partido=5'*/ },
     { fecha:6,  local:T('naranjaLechera'), visitante:T('guerrerosZ'), goles_local:'-',  goles_visitante:'-',  /*link:'partidos/partido.html?partido=6'*/ },
@@ -48,13 +48,19 @@ const FIXTURE = [
 //  GOLEADORES
 // ================================
 const GOLEADORES = [
+    { jugador:'Tomás Mango',       equipo:T('guerrerosZ'),    goles:5 },
+    { jugador:'Maxi Ventura',       equipo:T('guerrerosZ'),    goles:4 },
     { jugador:'Franco Favotti',        equipo:T('naranjaLechera'), goles:3 },
-    { jugador:'Maxi Ventura',       equipo:T('guerrerosZ'),    goles:2 },
+    { jugador:'Nicolás Viale',  equipo:T('naranjaLechera'),    goles:2 },   
     { jugador:'Diego Arroyo',       equipo:T('naranjaLechera'),    goles:1 },
-    { jugador:'Enzo Juarez',     equipo:T('guerrerosZ'), goles:1 },
+    { jugador:'Enzo Juarez',     equipo:T('guerrerosZ'), goles:3 },
     { jugador:'Nahuel Monti',  equipo:T('naranjaLechera'),    goles:1 },
-    //{ jugador:'Gerardo Vaello',     equipo:T('naranjaLechera'),    goles:1,  doble:true },
-    
+    { jugador:'Joni',  equipo:T('naranjaLechera'),    goles:1 },
+    { jugador:'Agustín Navarro',  equipo:T('guerrerosZ'),    goles:1 },
+    { jugador:'Alejo Osuna',  equipo:T('guerrerosZ'),    goles:1 },
+    { jugador:'Jeronimo Hidalgo',  equipo:T('naranjaLechera'),    goles:1 }, 
+    { jugador:'Juan Macchi',  equipo:T('guerrerosZ'),    goles:1 },  
+    { jugador:'Agustín Lonero',  equipo:T('naranjaLechera'),    goles:1 }, 
 ];
 
 // ================================
@@ -62,9 +68,9 @@ const GOLEADORES = [
 // ================================
 const MVPS = [
     { fecha:1,  equipo:T('naranjaLechera'),    jugador:'Franco Favotti' },
-    /*{ fecha:2,  equipo:T('naranjaLechera'),    jugador:'Diego Arroyo' },
-    { fecha:3,  equipo:T('guerrerosZ'), jugador:'Mateo Pugliese' },
-    { fecha:4,  equipo:T('guerrerosZ'), jugador:'Juanse Macchi' },
+    { fecha:2,  equipo:T('guerrerosZ'),    jugador:'Tomás Mango' },
+    { fecha:3,  equipo:T('guerrerosZ'), jugador:'Tomás Mango' },
+    /*{ fecha:4,  equipo:T('guerrerosZ'), jugador:'Juanse Macchi' },
     { fecha:5,  equipo:T('guerrerosZ'), jugador:'Tomas Mango' },
     { fecha:6,  equipo:T('guerrerosZ'), jugador:'Franco Mangiameli' },
     { fecha:7,  equipo:T('guerrerosZ'), jugador:'Mateo Pugliese' },
@@ -77,10 +83,10 @@ const MVPS = [
 // ================================
 //  TRANSFERENCIAS
 // ================================
-/*const TRANSFERS = [
-    { jugador:'Manuel Panizo',     desde:T('naranjaLechera'),    destino:T('guerrerosZ') },
-    { jugador:'Gerardo Vaello',    desde:T('guerrerosZ'), destino:T('naranjaLechera') },
-    { jugador:'Milton Cabrera',    desde:T('naranjaLechera'),    destino:T('guerrerosZ') },
+const TRANSFERS = [
+    { jugador:'Milton Cabrera',     desde:T('naranjaLechera'),    destino:T('guerrerosZ') },
+    { jugador:'Agustin Lonero',    desde:T('guerrerosZ'), destino:T('naranjaLechera') },
+    /*{ jugador:'Milton Cabrera',    desde:T('naranjaLechera'),    destino:T('guerrerosZ') },
     { jugador:'Fabrizio Cecchini', desde:T('guerrerosZ'), destino:T('naranjaLechera') },
-    { jugador:'Joni Monti',        desde:null,           destino:T('naranjaLechera') }
-];*/
+    { jugador:'Joni Monti',        desde:null,           destino:T('naranjaLechera') }*/
+];

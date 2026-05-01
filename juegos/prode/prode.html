@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prode — Liga de los Pataduras</title>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/media/GTcpPQ2XEAEc3x-?format=png&name=small" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prode.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+    <button class="back-btn" id="backBtn" onclick="handleBack()" aria-label="Volver" data-index="../../index.html">←</button>
+    <span class="header-brand">🎯 Prode</span>
+    <div class="header-user" id="headerUser">
+        <span class="user-chip" id="headerUserName"></span>
+        <button class="logout-btn" onclick="logout()">salir</button>
+    </div>
+</header>
+
+<!-- ══ LOGIN ══ -->
+<div class="screen active" id="screen-login">
+    <div class="login-box">
+        <div class="login-logo">🎯</div>
+        <h1 class="login-title">Prode</h1>
+        <p class="login-sub">Ingresá tu usuario y contraseña para participar</p>
+
+        <div class="field">
+            <label>Nombre</label>
+            <input type="text" id="loginName" placeholder="Ej: Fabi" maxlength="20" autocomplete="off">
+        </div>
+        <div class="field">
+            <label>Contraseña</label>
+            <input type="password" id="loginPassword" placeholder="Mínimo 4 caracteres" maxlength="30" autocomplete="current-password">
+        </div>
+
+        <div class="login-error" id="loginError"></div>
+
+        <button class="btn btn-primary" id="loginBtn">Entrar →</button>
+        <p style="font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5">
+            Si es tu primera vez, se creará tu usuario automáticamente.<br>
+            Si ya votaste antes, ingresá el mismo nombre y contraseña.
+        </p>
+    </div>
+</div>
+
+<!-- ══ APP ══ -->
+<div class="screen" id="screen-app">
+    <nav class="nav-tabs">
+        <button class="nav-tab active" id="tab-votar"   onclick="switchTab('votar')">Votar</button> 
+        <button class="nav-tab"        id="tab-ranking" onclick="switchTab('ranking')">Ranking</button>
+        <button class="nav-tab tab-admin" id="tab-admin" onclick="switchTab('admin')">Admin ⚙</button>
+    </nav>
+    <div class="tab-content">
+        <div id="pane-votar"   class="page"></div>
+        <div id="pane-ranking" class="page" style="display:none"></div>
+        <div id="pane-admin"   class="page" style="display:none"></div>
+    </div>
+</div>
+
+<script type="module" src="prodeApp.js"></script>
+
+</body>
+</html>

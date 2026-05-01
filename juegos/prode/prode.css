@@ -1,0 +1,1305 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --bg: #080c18;
+    --surface: rgba(255,255,255,0.04);
+    --surface2: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.13);
+    --accent: #e63946;
+    --accent-glow: rgba(230,57,70,0.22);
+    --accent2: #4cc9f0;
+    --gold: #ffd60a;
+    --muted: #a8b2c1;
+    --text: #e8edf5;
+    --green: #2dc653;
+    --shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(230,57,70,0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 90%, rgba(76,201,240,0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ── */
+.site-header {
+    display: flex; align-items: center; justify-content: center;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,12,24,0.8);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    position: sticky; top: 0; z-index: 100;
+}
+.back-btn {
+    position: absolute; left: 16px;
+    font-size: 16px; color: var(--muted); text-decoration: none;
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border); border-radius: 8px;
+    background: var(--surface); transition: all 0.2s;
+    cursor: pointer; font-family: inherit;
+}
+.back-btn:hover { color: var(--text); border-color: var(--accent2); }
+.header-brand { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 2px; }
+.header-user { position: absolute; right: 16px; display: flex; align-items: center; gap: 8px; }
+.user-chip {
+    font-size: 12px; font-weight: 700;
+    background: var(--surface2); border: 1px solid var(--border2);
+    padding: 4px 10px; border-radius: 20px; color: var(--accent2);
+    max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.logout-btn { font-size: 11px; color: var(--muted); cursor: pointer; background: none; border: none; text-decoration: underline; }
+.logout-btn:hover { color: var(--accent); }
+
+/* ── NAV TABS ── */
+.nav-tabs { display: flex; border-bottom: 1px solid var(--border); background: rgba(8,12,24,0.5); overflow-x: auto; }
+.nav-tab {
+    flex: 1; min-width: 90px; padding: 12px 16px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.nav-tab:hover { color: var(--text); }
+.nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.nav-tab.tab-admin { color: rgba(255,214,10,0.45); }
+.nav-tab.tab-admin.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ── SCREENS ── */
+.screen { display: none; flex: 1; }
+.screen.active { display: flex; flex-direction: column; }
+
+/* ── LOGIN ── */
+#screen-login { align-items: center; justify-content: center; min-height: calc(100vh - 57px); padding: 32px 16px; }
+.login-box {
+    width: 100%; max-width: 400px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 20px; padding: 40px 28px; text-align: center;
+}
+.login-logo { font-size: 56px; margin-bottom: 14px; }
+.login-title { font-family: 'Bebas Neue', sans-serif; font-size: 38px; letter-spacing: 3px; margin-bottom: 6px; }
+.login-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+.login-box .field { text-align: left; }
+.login-error {
+    background: rgba(230,57,70,0.1); border: 1px solid rgba(230,57,70,0.3);
+    border-radius: 8px; padding: 10px 14px;
+    color: var(--accent); font-size: 13px; font-weight: 600;
+    margin-bottom: 14px; display: none;
+}
+.login-error.show { display: block; }
+
+/* Admin login overlay */
+.admin-lock {
+    text-align: center; padding: 48px 20px;
+}
+.admin-lock .lock-icon { font-size: 52px; margin-bottom: 14px; }
+.admin-lock h3 { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 2px; margin-bottom: 8px; }
+.admin-lock p { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+
+/* ══════════════════════════════════════════════════════
+   ADMIN — GESTIÓN DE USUARIOS
+   Agregar al final del CSS existente del prode
+   ══════════════════════════════════════════════════════ */
+
+/* Lista de usuarios en el panel admin */
+.admin-user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-user-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 12px 14px;
+    transition: border-color 0.2s;
+}
+
+.admin-user-row:hover {
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-user-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-user-key {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.admin-user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Campo de contraseña con toggle */
+.admin-pw-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 4px 6px 4px 10px;
+}
+
+.admin-pw-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--accent2);
+    font-family: 'Outfit', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    width: 110px;
+    letter-spacing: 0.5px;
+}
+
+.admin-pw-eye {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+}
+
+.admin-pw-eye:hover {
+    opacity: 1;
+}
+
+.admin-pw-unknown {
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 4px 2px;
+}
+
+/* Botones de acción por usuario */
+.admin-user-btns {
+    display: flex;
+    gap: 6px;
+}
+
+.admin-btn {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.admin-btn-reset {
+    background: rgba(76,201,240,0.08);
+    color: var(--accent2);
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-btn-reset:hover {
+    background: rgba(76,201,240,0.18);
+    border-color: var(--accent2);
+}
+
+.admin-btn-delete {
+    background: rgba(230,57,70,0.08);
+    color: var(--accent);
+    border-color: rgba(230,57,70,0.2);
+}
+
+.admin-btn-delete:hover {
+    background: rgba(230,57,70,0.2);
+    border-color: var(--accent);
+}
+
+.admin-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════
+   GOLEADORES — nueva UI por jugador + cantidad
+   ══════════════════════════════════════════════════════ */
+
+/* Cabecera de la sección de goles */
+.gol-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+/* Botón "Agregar jugador" */
+.gol-add-btn {
+    background: rgba(76,201,240,0.1);
+    border: 1px solid rgba(76,201,240,0.3);
+    border-radius: 7px;
+    color: var(--accent2);
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+.gol-add-btn:hover:not(:disabled) {
+    background: rgba(76,201,240,0.2);
+    border-color: var(--accent2);
+}
+.gol-add-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Fila de un jugador goleador */
+.gol-player-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 8px 10px;
+    transition: border-color 0.15s;
+}
+.gol-player-row:hover {
+    border-color: rgba(76,201,240,0.15);
+}
+
+/* Selector de jugador + badge de pts/gol */
+.gol-player-select-wrap {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.gol-player-select-wrap select {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+.gol-player-select-wrap select:focus {
+    border-color: var(--accent2);
+}
+
+/* Badge que muestra el pts/gol del jugador seleccionado */
+.gol-pts-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent2);
+    background: rgba(76,201,240,0.12);
+    border: 1px solid rgba(76,201,240,0.25);
+    border-radius: 5px;
+    padding: 3px 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+}
+
+/* Stepper de cantidad de goles */
+.gol-qty-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+.gol-qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    line-height: 1;
+    padding: 0;
+}
+.gol-qty-btn:hover:not(:disabled) {
+    background: rgba(76,201,240,0.15);
+    border-color: var(--accent2);
+    color: var(--accent2);
+}
+.gol-qty-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+.gol-qty-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    min-width: 22px;
+    text-align: center;
+    color: var(--text);
+}
+
+/* Puntos potenciales de la fila */
+.gol-pot-pts {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+/* Botón quitar fila */
+.gol-remove-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid rgba(230,57,70,0.2);
+    background: rgba(230,57,70,0.07);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+    padding: 0;
+}
+.gol-remove-btn:hover {
+    background: rgba(230,57,70,0.2);
+    border-color: var(--accent);
+}
+
+/* ── MVP selector con pts ── */
+.mvp-select-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mvp-pts-badge {
+    display: inline-block;
+    background: rgba(255,214,10,0.1);
+    border: 1px solid rgba(255,214,10,0.3);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--gold);
+}
+.mvp-pts-badge strong {
+    font-size: 16px;
+}
+
+/* ── Breakdown mejorado: muestra pts en cada item ── */
+.rb em {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-left: 4px;
+    display: block;
+    line-height: 1.2;
+}
+
+/* ── Hint de puntos debajo del stepper de resultado ── */
+.result-pts-hint {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.hint-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+}
+
+.hint-chip.exact {
+    background: rgba(255,214,10,0.1);
+    border: 1px solid rgba(255,214,10,0.3);
+    color: var(--gold);
+}
+
+.hint-chip.winner {
+    background: rgba(76,201,240,0.08);
+    border: 1px solid rgba(76,201,240,0.2);
+    color: var(--accent2);
+}
+
+/* ── Card de puntos en vivo ── */
+.live-pts-card {
+    border-color: rgba(255,214,10,0.2) !important;
+    background: rgba(255,214,10,0.03);
+}
+
+.live-pts-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.live-pts-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.live-pts-total {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.live-pts-total.has-pts {
+    color: var(--gold);
+}
+
+.live-pts-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.live-pts-empty {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.live-pts-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.live-pts-row.sub-row {
+    background: transparent;
+    border-color: transparent;
+    padding-left: 18px;
+    opacity: 0.55;
+}
+
+.live-pts-row.type-result-exact {
+    border-color: rgba(255,214,10,0.15);
+}
+
+.live-pts-row.type-scorer {
+    border-color: rgba(76,201,240,0.1);
+}
+
+.live-pts-row.type-mvp {
+    border-color: rgba(230,57,70,0.12);
+}
+
+.live-pts-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+}
+
+.live-pts-val {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.live-pts-row.sub-row .live-pts-val {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* Lista de usuarios en el panel admin */
+.admin-user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-user-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 12px 14px;
+    transition: border-color 0.2s;
+}
+
+.admin-user-row:hover {
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-user-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-user-key {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.admin-user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Campo de contraseña con toggle */
+.admin-pw-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 4px 6px 4px 10px;
+}
+
+.admin-pw-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--accent2);
+    font-family: 'Outfit', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    width: 110px;
+    letter-spacing: 0.5px;
+}
+
+.admin-pw-eye {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+}
+
+.admin-pw-eye:hover {
+    opacity: 1;
+}
+
+.admin-pw-unknown {
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 4px 2px;
+}
+
+/* Botones de acción por usuario */
+.admin-user-btns {
+    display: flex;
+    gap: 6px;
+}
+
+.admin-btn {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.admin-btn-reset {
+    background: rgba(76,201,240,0.08);
+    color: var(--accent2);
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-btn-reset:hover {
+    background: rgba(76,201,240,0.18);
+    border-color: var(--accent2);
+}
+
+.admin-btn-delete {
+    background: rgba(230,57,70,0.08);
+    color: var(--accent);
+    border-color: rgba(230,57,70,0.2);
+}
+
+.admin-btn-delete:hover {
+    background: rgba(230,57,70,0.2);
+    border-color: var(--accent);
+}
+
+.admin-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════
+   GOLEADORES — nueva UI por jugador + cantidad
+   ══════════════════════════════════════════════════════ */
+
+/* Cabecera de la sección de goles */
+.gol-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+/* Botón "Agregar jugador" */
+.gol-add-btn {
+    background: rgba(76,201,240,0.1);
+    border: 1px solid rgba(76,201,240,0.3);
+    border-radius: 7px;
+    color: var(--accent2);
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+.gol-add-btn:hover:not(:disabled) {
+    background: rgba(76,201,240,0.2);
+    border-color: var(--accent2);
+}
+.gol-add-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Fila de un jugador goleador */
+.gol-player-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 8px 10px;
+    transition: border-color 0.15s;
+}
+.gol-player-row:hover {
+    border-color: rgba(76,201,240,0.15);
+}
+
+/* Selector de jugador + badge de pts/gol */
+.gol-player-select-wrap {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.gol-player-select-wrap select {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+.gol-player-select-wrap select:focus {
+    border-color: var(--accent2);
+}
+
+/* Badge que muestra el pts/gol del jugador seleccionado */
+.gol-pts-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent2);
+    background: rgba(76,201,240,0.12);
+    border: 1px solid rgba(76,201,240,0.25);
+    border-radius: 5px;
+    padding: 3px 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+}
+
+/* Stepper de cantidad de goles */
+.gol-qty-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+.gol-qty-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    line-height: 1;
+    padding: 0;
+}
+.gol-qty-btn:hover:not(:disabled) {
+    background: rgba(76,201,240,0.15);
+    border-color: var(--accent2);
+    color: var(--accent2);
+}
+.gol-qty-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+.gol-qty-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    min-width: 22px;
+    text-align: center;
+    color: var(--text);
+}
+
+/* Puntos potenciales de la fila */
+.gol-pot-pts {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+/* Botón quitar fila */
+.gol-remove-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid rgba(230,57,70,0.2);
+    background: rgba(230,57,70,0.07);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+    padding: 0;
+}
+.gol-remove-btn:hover {
+    background: rgba(230,57,70,0.2);
+    border-color: var(--accent);
+}
+
+/* ── MVP selector con pts ── */
+.mvp-select-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mvp-pts-badge {
+    display: inline-block;
+    background: rgba(255,214,10,0.1);
+    border: 1px solid rgba(255,214,10,0.3);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--gold);
+}
+.mvp-pts-badge strong {
+    font-size: 16px;
+}
+
+/* ── Breakdown mejorado: muestra pts en cada item ── */
+.rb em {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-left: 4px;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Lista de usuarios en el panel admin */
+.admin-user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-user-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 12px 14px;
+    transition: border-color 0.2s;
+}
+
+.admin-user-row:hover {
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-user-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.admin-user-key {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.admin-user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Campo de contraseña con toggle */
+.admin-pw-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 4px 6px 4px 10px;
+}
+
+.admin-pw-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--accent2);
+    font-family: 'Outfit', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    width: 110px;
+    letter-spacing: 0.5px;
+}
+
+.admin-pw-eye {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+    flex-shrink: 0;
+}
+
+.admin-pw-eye:hover {
+    opacity: 1;
+}
+
+.admin-pw-unknown {
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 4px 2px;
+}
+
+/* Botones de acción por usuario */
+.admin-user-btns {
+    display: flex;
+    gap: 6px;
+}
+
+.admin-btn {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.admin-btn-reset {
+    background: rgba(76,201,240,0.08);
+    color: var(--accent2);
+    border-color: rgba(76,201,240,0.2);
+}
+
+.admin-btn-reset:hover {
+    background: rgba(76,201,240,0.18);
+    border-color: var(--accent2);
+}
+
+.admin-btn-delete {
+    background: rgba(230,57,70,0.08);
+    color: var(--accent);
+    border-color: rgba(230,57,70,0.2);
+}
+
+.admin-btn-delete:hover {
+    background: rgba(230,57,70,0.2);
+    border-color: var(--accent);
+}
+
+.admin-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ── APP ── */
+#screen-app { flex-direction: column; min-height: calc(100vh - 57px); }
+.tab-content { flex: 1; }
+
+/* ── PAGE ── */
+.page { max-width: 660px; margin: 0 auto; padding: 28px 16px 80px; width: 100%; }
+
+/* ── CARD ── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-bottom: 16px; }
+.card-title {
+    font-family: 'Bebas Neue', sans-serif; font-size: 19px; letter-spacing: 1.5px;
+    color: var(--text); margin-bottom: 4px;
+    display: flex; align-items: center; gap: 8px;
+}
+.card-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border2), transparent); }
+.card-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+
+/* ── MATCH HEADER ── */
+.match-meta {
+    font-size: 12px; color: var(--muted);
+    display: flex; gap: 16px; justify-content: center;
+    padding-bottom: 14px; border-bottom: 1px solid var(--border); margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+.match-teams { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.match-team { flex: 1; text-align: center; }
+.match-team-logo {
+    width: 60px; height: 60px; object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+    display: block; margin: 0 auto 8px;
+}
+.match-team-name { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 1px; line-height: 1.2; }
+.match-vs { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 3px; color: var(--muted); flex-shrink: 0; }
+
+/* ── SCORE INPUT — modern stepper style ── */
+.score-block { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 8px; }
+.score-team-block { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.score-team-tag {
+    font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); max-width: 100px; text-align: center; line-height: 1.2;
+}
+.score-stepper {
+    display: flex; align-items: center; gap: 0;
+    background: var(--surface2); border: 1px solid var(--border2); border-radius: 12px;
+    overflow: hidden;
+}
+.score-stepper button {
+    width: 38px; height: 56px;
+    background: none; border: none; color: var(--muted); font-size: 20px;
+    cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center;
+}
+.score-stepper button:hover { background: var(--surface); color: var(--text); }
+.score-stepper .score-val {
+    font-family: 'Bebas Neue', sans-serif; font-size: 38px; letter-spacing: 2px;
+    min-width: 52px; text-align: center; color: var(--text);
+    border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+    line-height: 56px;
+    /* hidden number input overlay */
+    position: relative;
+}
+.score-stepper .score-val input {
+    position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%;
+    font-family: 'Bebas Neue', sans-serif; font-size: 38px; text-align: center;
+    background: none; border: none; color: var(--text); cursor: pointer;
+    appearance: none; -moz-appearance: textfield;
+}
+.score-stepper .score-val input::-webkit-outer-spin-button,
+.score-stepper .score-val input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.score-separator {
+    font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--muted); padding: 0 4px;
+}
+
+/* ── FIELDS ── */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+.field input, .field select {
+    width: 100%; padding: 11px 14px;
+    background: var(--surface2); border: 1px solid var(--border2);
+    border-radius: 10px; color: var(--text);
+    font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600;
+    outline: none; transition: border-color 0.2s;
+    -webkit-appearance: none; appearance: none;
+}
+.field input:focus, .field select:focus { border-color: var(--accent2); }
+.field select option { background: #131929; color: var(--text); }
+.field input[type="password"] { letter-spacing: 2px; }
+
+/* Goleadores */
+.gol-header { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.gol-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.gol-row select { flex: 1; min-width: 0; }
+.slot-label {
+    font-size: 12px; color: var(--muted); font-weight: 700;
+    min-width: 26px; text-align: center;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 4px;
+}
+.gol-empty { font-size: 13px; color: var(--muted); padding: 6px 0; font-style: italic; }
+
+/* ── BUTTONS ── */
+.btn {
+    width: 100%; padding: 14px; border: none; border-radius: 12px;
+    font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700;
+    cursor: pointer; transition: all 0.2s; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--accent); color: white; box-shadow: 0 4px 16px var(--accent-glow); }
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+.btn-secondary { background: var(--surface2); color: var(--muted); border: 1px solid var(--border2); margin-top: 10px; }
+.btn-secondary:hover { color: var(--text); }
+.btn-gold { background: linear-gradient(135deg, var(--gold), #d4900a); color: #1a1200; }
+.btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ── BANNERS ── */
+.info-box {
+    background: rgba(76,201,240,0.06); border: 1px solid rgba(76,201,240,0.18);
+    border-radius: 10px; padding: 11px 15px;
+    font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6;
+}
+.info-box strong { color: var(--accent2); }
+.success-banner {
+    background: rgba(45,198,83,0.09); border: 1px solid rgba(45,198,83,0.3);
+    border-radius: 10px; padding: 12px 16px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; font-weight: 600; color: var(--green); margin-bottom: 14px;
+}
+
+/* ── RANKING ── */
+.ranking-list { display: flex; flex-direction: column; gap: 10px; }
+.rank-row {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px; transition: all 0.15s;
+}
+.rank-row.me { border-color: rgba(76,201,240,0.35); background: rgba(76,201,240,0.04); }
+.rank-pos { font-family: 'Bebas Neue', sans-serif; font-size: 26px; min-width: 28px; text-align: center; color: var(--muted); }
+.rank-pos.gold { color: var(--gold); }
+.rank-pos.silver { color: #c0c0c0; }
+.rank-pos.bronze { color: #cd7f32; }
+.rank-body { flex: 1; min-width: 0; }
+.rank-name { font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 6px; }
+.me-badge { font-size: 10px; color: var(--accent2); letter-spacing: 1px; text-transform: uppercase; }
+.rank-breakdown { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.rb { font-size: 11px; padding: 2px 7px; border-radius: 4px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); }
+.rb.hit { color: var(--green); border-color: rgba(45,198,83,0.3); background: rgba(45,198,83,0.08); }
+.rank-pts-col { text-align: right; flex-shrink: 0; }
+.rank-pts { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--gold); }
+.rank-pts-lbl { font-size: 10px; color: var(--muted); }
+
+/* ── RESULT DISPLAY ── */
+.result-display {
+    background: rgba(45,198,83,0.08); border: 1px solid rgba(45,198,83,0.25);
+    border-radius: 12px; padding: 16px; margin-bottom: 16px; text-align: center;
+}
+.result-score { font-family: 'Bebas Neue', sans-serif; font-size: 38px; letter-spacing: 4px; color: var(--green); }
+.result-meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* ── ADMIN ── */
+.vote-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }
+.vote-card-name { font-weight: 700; margin-bottom: 4px; font-size: 14px; }
+.vote-card-detail { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ── MISC ── */
+.sec-header {
+    font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1.5px;
+    margin: 24px 0 12px; display: flex; align-items: center; gap: 8px;
+}
+.sec-header::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border2), transparent); }
+.center-msg { text-align: center; padding: 40px 0; color: var(--muted); font-size: 14px; }
+.center-msg .big { font-size: 44px; margin-bottom: 10px; }
+.loading { text-align: center; padding: 48px; color: var(--muted); }
+.spinner { width: 30px; height: 30px; border: 3px solid var(--border2); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 480px) {
+    .header-brand { font-size: 20px; }
+    .user-chip { max-width: 80px; }
+    .match-teams { gap: 6px; }
+    .score-block { gap: 8px; }
+}
+
+/* ── Admin: panel de usuarios ── */
+.user-admin-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 11px 14px; margin-bottom: 8px;
+}
+.user-admin-info { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.user-admin-name { font-weight: 700; font-size: 14px; }
+.user-voted-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    color: var(--green); background: rgba(45,198,83,0.1);
+    border: 1px solid rgba(45,198,83,0.25); border-radius: 4px; padding: 2px 7px;
+    white-space: nowrap;
+}
+.user-pending-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    color: var(--muted); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 4px; padding: 2px 7px;
+    white-space: nowrap;
+}
+.btn-reset-user {
+    font-size: 12px; font-weight: 700; padding: 6px 12px;
+    background: rgba(230,57,70,0.1); border: 1px solid rgba(230,57,70,0.3);
+    color: var(--accent); border-radius: 8px; cursor: pointer;
+    white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+}
+.btn-reset-user:hover { background: rgba(230,57,70,0.2); }
+
+/* ── Próximamente ── */
+.coming-soon-block {
+    text-align: center; padding: 24px 8px 8px;
+}
+.coming-soon-icon { font-size: 52px; margin-bottom: 14px; }
+.coming-soon-title {
+    font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 3px;
+    color: var(--muted); margin-bottom: 6px;
+}
+.coming-soon-fecha {
+    font-family: 'Bebas Neue', sans-serif; font-size: 42px; letter-spacing: 3px;
+    color: var(--accent2); margin-bottom: 12px;
+}
+.coming-soon-sub { font-size: 14px; color: var(--muted); line-height: 1.6; }
